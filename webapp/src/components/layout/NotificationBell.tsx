@@ -5,7 +5,12 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import { timeAgo } from "@/lib/timeAgo";
 
-type NotificationType = "forum_reply" | "new_report" | "new_contact_message";
+type NotificationType =
+  | "forum_reply"
+  | "new_report"
+  | "new_contact_message"
+  | "friend_request"
+  | "friend_accepted";
 
 type NotificationRow = {
   id: string;
