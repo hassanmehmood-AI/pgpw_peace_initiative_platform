@@ -26,8 +26,8 @@ export type FriendRequest = {
 };
 
 export const MOCK_FRIENDS: Friend[] = [
-  { id: "f1", name: "SarahP", community: "neutral", role: "mediator", status: "online", mutualCount: 12 },
-  { id: "f2", name: "MediatorJoe", community: "neutral", role: "mediator", status: "online", mutualCount: 9 },
+  { id: "f1", name: "SarahP", community: "neutral", role: "admin", status: "online", mutualCount: 12 },
+  { id: "f2", name: "MediatorJoe", community: "neutral", role: "admin", status: "online", mutualCount: 9 },
   { id: "f3", name: "Carlos_B", community: "blood", role: "member", status: "offline", mutualCount: 5 },
   { id: "f4", name: "LKing_Ramirez", community: "latin_king", role: "member", status: "online", mutualCount: 7 },
   { id: "f5", name: "CripKing_C", community: "crip", role: "member", status: "offline", mutualCount: 3 },

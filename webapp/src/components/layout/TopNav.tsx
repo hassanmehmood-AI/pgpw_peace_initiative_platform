@@ -4,7 +4,6 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
-import { useSession } from "@/lib/session";
 
 type NavLink = {
   label: string;
@@ -15,17 +14,13 @@ type NavLink = {
 const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Forums", href: "/forums" },
-  { label: "Members", href: "#", disabled: true },
   { label: "Peace Resources", href: "/safety" },
   { label: "About", href: "/about" },
 ];
 
-const iconActions = ["search", "mail", "notifications"];
-
 export function TopNav() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { session, logout } = useSession();
 
   return (
     <nav className="sticky top-0 z-50 border-b-2 border-primary bg-surface-container-lowest">
@@ -63,37 +58,13 @@ export function TopNav() {
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="hidden gap-3 md:flex">
-            {iconActions.map((icon) => (
-              <button
-                key={icon}
-                type="button"
-                className="text-on-surface-variant transition-colors hover:text-primary"
-              >
-                <span className="material-symbols-outlined">{icon}</span>
-              </button>
-            ))}
-          </div>
           <div className="hidden sm:flex sm:items-center sm:gap-3">
-            {session ? (
-              <>
-                <Button href="/feed" variant="primary">
-                  Go to Feed
-                </Button>
-                <Button variant="ghost" onClick={logout}>
-                  Log out
-                </Button>
-              </>
-            ) : (
-              <>
-                <Button href="/login" variant="secondary">
-                  Login
-                </Button>
-                <Button href="/register" variant="primary">
-                  Sign Up
-                </Button>
-              </>
-            )}
+            <Button href="/login" variant="secondary">
+              Sign In
+            </Button>
+            <Button href="/register" variant="primary">
+              Sign Up
+            </Button>
           </div>
           <button
             type="button"
@@ -131,25 +102,12 @@ export function TopNav() {
             ),
           )}
           <div className="mt-3 flex gap-3">
-            {session ? (
-              <>
-                <Button href="/feed" variant="primary" className="flex-1">
-                  Go to Feed
-                </Button>
-                <Button variant="ghost" onClick={logout} className="flex-1">
-                  Log out
-                </Button>
-              </>
-            ) : (
-              <>
-                <Button href="/login" variant="secondary" className="flex-1">
-                  Login
-                </Button>
-                <Button href="/register" variant="primary" className="flex-1">
-                  Sign Up
-                </Button>
-              </>
-            )}
+            <Button href="/login" variant="secondary" className="flex-1">
+              Sign In
+            </Button>
+            <Button href="/register" variant="primary" className="flex-1">
+              Sign Up
+            </Button>
           </div>
         </div>
       )}

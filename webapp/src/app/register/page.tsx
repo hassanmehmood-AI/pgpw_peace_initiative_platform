@@ -8,6 +8,7 @@ import { z } from "zod";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { createClient } from "@/lib/supabase/client";
+import { useSession } from "@/lib/session";
 import type { Community } from "@/components/ui/AffiliationChip";
 import { profileSchema } from "@/lib/validation/registration";
 
@@ -32,10 +33,10 @@ type AffiliationOption = {
 };
 
 const AFFILIATIONS: AffiliationOption[] = [
-  { value: "crip",         label: "Crip",                      subtitle: "Community Representative", cssClass: "affiliation-crip",         sessionCommunity: "crip" },
-  { value: "blood",        label: "Blood",                     subtitle: "Community Representative", cssClass: "affiliation-blood",        sessionCommunity: "blood" },
-  { value: "latin_king",   label: "Latin King",                subtitle: "Community Representative", cssClass: "affiliation-latin_king",   sessionCommunity: "latin_king" },
-  { value: "deceptacon",   label: "Deceptacon",                subtitle: "Community Representative", cssClass: "affiliation-deceptacon",   sessionCommunity: "deceptacon" },
+  { value: "crip",         label: "Crip",                      subtitle: "Community Representative", cssClass: "affiliation-card-crip",         sessionCommunity: "crip" },
+  { value: "blood",        label: "Blood",                     subtitle: "Community Representative", cssClass: "affiliation-card-blood",        sessionCommunity: "blood" },
+  { value: "latin_king",   label: "Latin King",                subtitle: "Community Representative", cssClass: "affiliation-card-latin_king",   sessionCommunity: "latin_king" },
+  { value: "deceptacon",   label: "Deceptacon",                subtitle: "Community Representative", cssClass: "affiliation-card-deceptacon",   sessionCommunity: "deceptacon" },
   { value: "independent",  label: "Independent / No Affiliation", subtitle: "Citizen",              cssClass: "affiliation-neutral",       sessionCommunity: "neutral" },
   { value: "supporter",    label: "Community Supporter",       subtitle: "Ally",                     cssClass: "affiliation-neutral",       sessionCommunity: "neutral" },
   { value: "volunteer",    label: "Peace Volunteer",           subtitle: "Active Contributor",       cssClass: "affiliation-neutral",       sessionCommunity: "neutral" },
@@ -56,6 +57,7 @@ const VERIFICATION_STEP = STEP_LABELS.indexOf("Verification") + 1;
 export default function RegisterPage() {
   const router = useRouter();
   const supabase = useMemo(() => createClient(), []);
+  const { refreshSession } = useSession();
 
   // Wizard state
   const [step, setStep] = useState(1);
@@ -235,6 +237,7 @@ export default function RegisterPage() {
       return;
     }
 
+    await refreshSession();
     router.push("/feed");
     router.refresh();
   };

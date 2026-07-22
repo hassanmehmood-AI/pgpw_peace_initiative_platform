@@ -757,6 +757,20 @@ export default function FeedPage() {
             Access Help Center
           </Button>
         </section>
+
+        {/* Contact Us */}
+        <section className="rounded-lg border border-outline-variant bg-surface-container-lowest p-4">
+          <h2 className="mb-2 flex items-center gap-2 font-headline-md text-headline-md text-primary">
+            <span className="material-symbols-outlined">mail</span>
+            Contact Us
+          </h2>
+          <p className="mb-3 font-caption text-caption text-on-surface-variant">
+            Questions or feedback? Send a message to the admin team.
+          </p>
+          <Button href="/contact" variant="secondary" className="w-full">
+            Send a Message
+          </Button>
+        </section>
       </aside>
 
       {/* Report modal backdrop */}

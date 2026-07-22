@@ -100,21 +100,19 @@ export default function Home() {
                 <Card
                   key={community}
                   hoverable
-                  className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center"
+                  className={`affiliation-card-${community} flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center`}
                 >
                   <div className="flex items-center gap-4">
-                    <div
-                      className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 ${meta.className}`}
-                    >
+                    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-white/60 bg-white/15">
                       <span className="material-symbols-outlined text-[32px]">
                         {meta.icon}
                       </span>
                     </div>
                     <div>
-                      <h3 className="font-headline-md text-headline-md text-primary">
+                      <h3 className="font-headline-md text-headline-md text-white">
                         {meta.label} Community
                       </h3>
-                      <p className="mt-1 font-body-md text-sm text-on-surface-variant">
+                      <p className="mt-1 font-body-md text-sm text-white/85">
                         Register for verified access and dialogue.
                       </p>
                     </div>
@@ -256,6 +254,23 @@ export default function Home() {
                 ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Us CTA */}
+      <section className="border-t border-secondary-fixed bg-surface-container-low">
+        <div className="mx-auto flex w-full max-w-container-max flex-col items-center gap-4 px-margin-mobile py-stack-lg text-center md:px-margin-desktop">
+          <span className="material-symbols-outlined text-4xl text-primary">mail</span>
+          <h2 className="font-headline-lg text-headline-lg uppercase tracking-tight text-primary">
+            Have a Question?
+          </h2>
+          <p className="max-w-xl font-body-md text-on-surface-variant">
+            Partnership inquiries, feedback, or anything else — send a message straight to the
+            PGPW administration team.
+          </p>
+          <Button href="/contact" size="lg" variant="primary" className="uppercase">
+            Contact Us
+          </Button>
         </div>
       </section>
     </>

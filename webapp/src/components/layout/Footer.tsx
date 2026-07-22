@@ -3,14 +3,14 @@ import { Logo } from "@/components/ui/Logo";
 type FooterLink = {
   label: string;
   href: string;
-  disabled?: boolean;
 };
 
 const footerLinks: FooterLink[] = [
-  { label: "Quick Links", href: "#", disabled: true },
+  { label: "Quick Links", href: "/quick-links" },
   { label: "Crisis Resources", href: "/safety" },
-  { label: "Legal", href: "#", disabled: true },
+  { label: "Legal", href: "/legal" },
   { label: "Safety Policy", href: "/safety" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export function Footer() {
@@ -22,25 +22,15 @@ export function Footer() {
           PeaceGangPeaceWorld
         </span>
         <div className="mt-4 flex flex-wrap justify-center gap-6">
-          {footerLinks.map((link) =>
-            link.disabled ? (
-              <span
-                key={link.label}
-                aria-disabled
-                className="cursor-not-allowed font-caption text-caption opacity-40"
-              >
-                {link.label}
-              </span>
-            ) : (
-              <a
-                key={link.label}
-                href={link.href}
-                className="font-caption text-caption opacity-80 transition-opacity duration-200 hover:text-secondary-fixed hover:opacity-100"
-              >
-                {link.label}
-              </a>
-            ),
-          )}
+          {footerLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="font-caption text-caption opacity-80 transition-opacity duration-200 hover:text-secondary-fixed hover:opacity-100"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
         <p className="mt-4 max-w-3xl text-center font-caption text-caption opacity-60">
           © 2026 PeaceGangPeaceWorld. All Rights Reserved. Peace-building

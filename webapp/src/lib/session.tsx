@@ -12,7 +12,7 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/client";
 import type { Community } from "@/components/ui/AffiliationChip";
 
-export type Role = "member" | "mediator" | "admin";
+export type Role = "member" | "admin";
 
 export type MockSession = {
   id: string;
@@ -26,7 +26,6 @@ export type MockSession = {
 
 const roleLabels: Record<Role, string> = {
   member: "Peace Builder",
-  mediator: "Mediator",
   admin: "Administrator",
 };
 
@@ -35,7 +34,7 @@ export function roleLabel(role: Role) {
 }
 
 export function canModerate(role: Role) {
-  return role === "mediator" || role === "admin";
+  return role === "admin";
 }
 
 /**
@@ -81,6 +80,11 @@ type SessionContextValue = {
   // leaves it untouched. This is why it's split out from the rest of
   // MockSession's `avatarUrl?: string`, which has no way to express "clear".
   updateSession: (patch: Partial<Omit<MockSession, "id" | "avatarUrl">> & { avatarUrl?: string | null }) => Promise<void>;
+  // Re-fetches the `profiles` row for the current auth user. Needed right
+  // after registration inserts that row — creating it doesn't fire a
+  // Supabase auth event, so without this the session would stay stuck on
+  // the "authenticated but no profile" state it was in before the insert.
+  refreshSession: () => Promise<void>;
 };
 
 const SessionContext = createContext<SessionContextValue | null>(null);
@@ -158,7 +162,13 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     });
   };
 
-  const value: SessionContextValue = { session, loading, authUserId, logout, updateSession };
+  const refreshSession = async () => {
+    if (!authUserId) return;
+    const profile = await fetchProfile(supabase, authUserId);
+    setSession(profile);
+  };
+
+  const value: SessionContextValue = { session, loading, authUserId, logout, updateSession, refreshSession };
 
   return <SessionContext.Provider value={value}>{children}</SessionContext.Provider>;
 }

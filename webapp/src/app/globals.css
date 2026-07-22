@@ -176,7 +176,9 @@ body {
 
   /* Community affiliation chip colors — pill background is a 5% tint, border/text
      is full-saturation, .selected bumps the tint to 15% + a 2px border. Values
-     ported verbatim from the custom <style> block in every registration mockup. */
+     ported verbatim from the custom <style> block in every registration mockup.
+     Used for small chips/badges (AffiliationChip) and the "neutral" register-wizard
+     options. For full-card photo backgrounds see .affiliation-card-* below. */
   .affiliation-crip {
     border-color: var(--color-crip-blue);
     color: var(--color-crip-blue);
@@ -214,6 +216,62 @@ body {
   }
   .affiliation-deceptacon.selected {
     background-color: color-mix(in srgb, var(--color-deceptacon-purple) 15%, transparent);
+    border-width: 2px;
+  }
+
+  /* Full-card affiliation backgrounds — the whole card shows the bandana-pattern
+     photo, tinted with the affiliation color so white text stays readable.
+     Used by the register-wizard core-affiliation buttons and the landing page's
+     Community Registration cards. .selected deepens the tint. */
+  .affiliation-card-crip {
+    border-color: var(--color-crip-blue);
+    color: #fff;
+    background-image: linear-gradient(color-mix(in srgb, var(--color-crip-blue) 70%, transparent), color-mix(in srgb, var(--color-crip-blue) 70%, transparent)), url("/images/registration/affiliation-crip.jpg");
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
+  .affiliation-card-crip.selected {
+    background-image: linear-gradient(color-mix(in srgb, var(--color-crip-blue) 85%, transparent), color-mix(in srgb, var(--color-crip-blue) 85%, transparent)), url("/images/registration/affiliation-crip.jpg");
+    border-width: 2px;
+  }
+
+  .affiliation-card-blood {
+    border-color: var(--color-blood-red);
+    color: #fff;
+    background-image: linear-gradient(color-mix(in srgb, var(--color-blood-red) 70%, transparent), color-mix(in srgb, var(--color-blood-red) 70%, transparent)), url("/images/registration/affiliation-blood.jpg");
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
+  .affiliation-card-blood.selected {
+    background-image: linear-gradient(color-mix(in srgb, var(--color-blood-red) 85%, transparent), color-mix(in srgb, var(--color-blood-red) 85%, transparent)), url("/images/registration/affiliation-blood.jpg");
+    border-width: 2px;
+  }
+
+  .affiliation-card-latin_king {
+    border-color: var(--color-latin-king-yellow);
+    color: #fff;
+    background-image: linear-gradient(color-mix(in srgb, var(--color-latin-king-yellow-text) 70%, transparent), color-mix(in srgb, var(--color-latin-king-yellow-text) 70%, transparent)), url("/images/registration/affiliation-latin_king.jpg");
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
+  .affiliation-card-latin_king.selected {
+    background-image: linear-gradient(color-mix(in srgb, var(--color-latin-king-yellow-text) 85%, transparent), color-mix(in srgb, var(--color-latin-king-yellow-text) 85%, transparent)), url("/images/registration/affiliation-latin_king.jpg");
+    border-width: 2px;
+  }
+
+  .affiliation-card-deceptacon {
+    border-color: var(--color-deceptacon-purple);
+    color: #fff;
+    background-image: linear-gradient(color-mix(in srgb, var(--color-deceptacon-purple) 70%, transparent), color-mix(in srgb, var(--color-deceptacon-purple) 70%, transparent)), url("/images/registration/affiliation-deceptacon.jpg");
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
+  .affiliation-card-deceptacon.selected {
+    background-image: linear-gradient(color-mix(in srgb, var(--color-deceptacon-purple) 85%, transparent), color-mix(in srgb, var(--color-deceptacon-purple) 85%, transparent)), url("/images/registration/affiliation-deceptacon.jpg");
     border-width: 2px;
   }
 
