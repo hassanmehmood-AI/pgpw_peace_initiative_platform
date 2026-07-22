@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Safety &amp; Reporting | PeaceGangPeaceWorld</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e1e2e4",
+                    "outline-variant": "#cfc4c5",
+                    "secondary-container": "#dfe0e0",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-background": "#151c27",
+                    "primary": "#000000",
+                    "on-tertiary-container": "#828486",
+                    "inverse-surface": "#2a313d",
+                    "outline": "#7e7576",
+                    "surface-container": "#e7eefe",
+                    "surface-bright": "#f9f9ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e2e8f8",
+                    "on-primary-fixed": "#1b1b1b",
+                    "secondary": "#5d5f5f",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "on-surface-variant": "#4c4546",
+                    "background": "#f9f9ff",
+                    "tertiary": "#000000",
+                    "surface-container-low": "#f0f3ff",
+                    "on-surface": "#151c27",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#5e5e5e",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "tertiary-container": "#191c1e",
+                    "on-primary-container": "#848484",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#dce2f3",
+                    "tertiary-fixed-dim": "#c5c6c8",
+                    "surface": "#f9f9ff",
+                    "on-secondary-container": "#616363",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#474747",
+                    "on-secondary-fixed-variant": "#454747",
+                    "surface-dim": "#d3daea",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#c6c6c6",
+                    "on-tertiary-fixed": "#191c1e",
+                    "primary-fixed": "#e2e2e2",
+                    "surface-variant": "#dce2f3",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "primary-container": "#1b1b1b",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "inverse-on-surface": "#ebf1ff",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "2rem",
+                    "gutter": "1.5rem",
+                    "stack-md": "1rem",
+                    "margin-mobile": "1rem",
+                    "margin-desktop": "2.5rem",
+                    "stack-sm": "0.5rem",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "caption": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["20px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .halftone-bg {
+            background-image: radial-gradient(#000 10%, transparent 11%), radial-gradient(#000 10%, transparent 11%);
+            background-size: 8px 8px;
+            background-position: 0 0, 4px 4px;
+            opacity: 0.05;
+        }
+        .warning-border {
+            border: 2px solid #ba1a1a;
+            position: relative;
+        }
+        .warning-border::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            border: 1px solid #000;
+            pointer-events: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation (Shell suppressed for mobile transactional-focused sub-page logic, but we include a focused back-bar) -->
+<nav class="sticky top-0 z-50 bg-surface-container-lowest border-b-2 border-primary px-margin-mobile py-4 flex items-center justify-between">
+<button class="flex items-center gap-2 text-primary" onclick="window.history.back()">
+<span class="material-symbols-outlined">arrow_back</span>
+<span class="font-label-bold text-label-bold">Safety Center</span>
+</button>
+<div class="font-display-lg text-headline-md font-extrabold text-primary">PGPW</div>
+</nav>
+<main class="max-w-md mx-auto px-margin-mobile py-stack-md flex flex-col gap-stack-lg">
+<!-- Header -->
+<header class="flex flex-col gap-stack-sm">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary uppercase tracking-tighter">Safety &amp; Reporting</h1>
+<p class="text-on-surface-variant font-body-md">Ensuring a neutral ground for peace-building. We prioritize immediate safety and uncompromising accountability.</p>
+</header>
+<!-- Section 1: Immediate Crisis Resources (High Contrast Warning) -->
+<section class="bg-error-container p-stack-md rounded-lg warning-border flex flex-col gap-stack-md relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2 opacity-10">
+<span class="material-symbols-outlined text-[80px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="flex items-center gap-stack-sm text-on-error-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emergency</span>
+<h2 class="font-label-bold text-label-bold uppercase">Immediate Crisis Resources</h2>
+</div>
+<p class="font-body-md text-on-error-container leading-tight">If you are in immediate physical danger or experiencing a mental health emergency, please use these verified neutral resources:</p>
+<div class="grid grid-cols-1 gap-stack-sm">
+<a class="bg-primary text-on-primary px-stack-md py-stack-sm rounded-lg flex items-center justify-between font-label-bold" href="tel:988">
+<span>988 Suicide &amp; Crisis Lifeline</span>
+<span class="material-symbols-outlined">call</span>
+</a>
+<a class="bg-surface-container-lowest border-2 border-primary text-primary px-stack-md py-stack-sm rounded-lg flex items-center justify-between font-label-bold" href="#">
+<span>Crisis Text Line (Text HOME to 741741)</span>
+<span class="material-symbols-outlined">chat_bubble</span>
+</a>
+</div>
+</section>
+<!-- Section 2: Violation Report Form -->
+<section class="flex flex-col gap-stack-md">
+<div class="flex items-center gap-2 border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined text-primary">report</span>
+<h3 class="font-headline-md text-headline-md">Report a Violation</h3>
+</div>
+<form class="flex flex-col gap-stack-md bg-surface-container-lowest border border-outline-variant p-stack-md rounded-lg shadow-sm">
+<div class="flex flex-col gap-stack-sm">
+<label class="font-label-bold text-label-bold text-primary">Category of Violation</label>
+<select class="w-full border border-outline-variant rounded-lg p-3 font-body-md focus:ring-2 focus:ring-primary focus:border-primary">
+<option>Direct Threat of Violence</option>
+<option>Hate Speech / Dehumanization</option>
+<option>Doxxing / Privacy Breach</option>
+<option>Impersonation</option>
+<option>Harassment</option>
+</select>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<label class="font-label-bold text-label-bold text-primary">Entity Involved (Username or Group)</label>
+<input class="w-full border border-outline-variant rounded-lg p-3 font-body-md focus:ring-2 focus:ring-primary focus:border-primary" placeholder="@username" type="text"/>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<label class="font-label-bold text-label-bold text-primary">Detailed Evidence</label>
+<textarea class="w-full border border-outline-variant rounded-lg p-3 font-body-md focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Describe the incident, including date, time, and specific content." rows="4"></textarea>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<label class="font-label-bold text-label-bold text-primary">Upload Screenshots (Optional)</label>
+<div class="border-2 border-dashed border-outline-variant rounded-lg p-stack-md flex flex-col items-center justify-center gap-stack-sm bg-surface-container-low">
+<span class="material-symbols-outlined text-outline">cloud_upload</span>
+<span class="text-caption text-outline">Drag &amp; drop or tap to select</span>
+</div>
+</div>
+<button class="bg-primary text-on-primary py-stack-md rounded-lg font-label-bold uppercase tracking-widest hover:bg-secondary transition-colors" type="submit">
+                    Submit Urgent Report
+                </button>
+</form>
+</section>
+<!-- Section 3: Platform Pillars (Bento-ish Grid) -->
+<section class="flex flex-col gap-stack-md">
+<h3 class="font-headline-md text-headline-md border-b border-outline-variant pb-2">Our Safety Pillars</h3>
+<div class="grid grid-cols-2 gap-stack-sm">
+<!-- Radical Neutrality -->
+<div class="bg-surface-container-lowest border border-outline-variant p-stack-sm rounded-lg flex flex-col gap-stack-sm">
+<div class="w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">balance</span>
+</div>
+<h4 class="font-label-bold text-label-bold leading-tight">Radical Neutrality</h4>
+<p class="text-caption text-on-surface-variant">We mediate without bias to ensure every voice for peace is heard.</p>
+</div>
+<!-- Zero Tolerance -->
+<div class="bg-primary text-on-primary p-stack-sm rounded-lg flex flex-col gap-stack-sm">
+<div class="w-10 h-10 bg-on-primary text-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">gavel</span>
+</div>
+<h4 class="font-label-bold text-label-bold leading-tight">Zero Tolerance</h4>
+<p class="text-caption opacity-80">Direct calls for violence result in immediate platform expulsion.</p>
+</div>
+<!-- Privacy First -->
+<div class="col-span-2 bg-surface-container-lowest border border-outline-variant p-stack-md rounded-lg flex items-center gap-stack-md">
+<div class="shrink-0 w-12 h-12 bg-secondary-container text-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">shield_person</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold">Identity Protection</h4>
+<p class="text-caption text-on-surface-variant">Encrypted reporting channels protect peace-builders in high-conflict zones.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Informational Footer/Resources -->
+<section class="mb-stack-lg">
+<div class="bg-surface-container-low rounded-xl p-stack-md flex flex-col gap-stack-sm border border-outline-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">policy</span>
+<h4 class="font-label-bold text-label-bold uppercase">Policy Resources</h4>
+</div>
+<ul class="flex flex-col gap-2">
+<li><a class="text-body-md text-primary underline flex items-center justify-between" href="#">Terms of Mediation <span class="material-symbols-outlined text-sm">chevron_right</span></a></li>
+<li><a class="text-body-md text-primary underline flex items-center justify-between" href="../pgpw_about_page_mobile/code.html">Community Neutrality Guidelines <span class="material-symbols-outlined text-sm">chevron_right</span></a></li>
+<li><a class="text-body-md text-primary underline flex items-center justify-between" href="#">Privacy Manifesto <span class="material-symbols-outlined text-sm">chevron_right</span></a></li>
+</ul>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation (JSON Anchor) -->
+<nav class="md:hidden sticky bottom-0 w-full bg-primary border-t-2 border-primary-fixed flex justify-around py-3 px-2 z-50">
+<a class="flex flex-col items-center gap-1 opacity-80 text-on-primary transition-opacity duration-200" href="../pgpw_landing_page_mobile/code.html">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-label-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 opacity-80 text-on-primary transition-opacity duration-200" href="../pgpw_news_feed_mobile/code.html">
+<span class="material-symbols-outlined">rss_feed</span>
+<span class="text-[10px] font-label-bold">Feed</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-primary font-bold border-b-2 border-on-primary transition-opacity duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="text-[10px] font-label-bold">Safety</span>
+</a>
+<a class="flex flex-col items-center gap-1 opacity-80 text-on-primary transition-opacity duration-200" href="../pgpw_admin_dashboard_mobile/code.html">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-label-bold">Settings</span>
+</a>
+</nav>
+<!-- Footer (JSON Anchor) -->
+<footer class="w-full py-stack-lg px-margin-desktop flex flex-col items-center gap-stack-md bg-primary text-on-primary border-t-4 border-primary">
+<div class="font-headline-md text-headline-md text-on-primary">PeaceGangPeaceWorld</div>
+<p class="font-caption text-caption text-center opacity-80 max-w-xs">
+            © 2024 PeaceGangPeaceWorld. All Rights Reserved. Peace-building disclaimer: This platform is dedicated to non-violence and mediator neutrality.
+        </p>
+<div class="flex gap-stack-sm font-caption text-caption uppercase tracking-widest opacity-60">
+<span>Crisis Resources</span>
+<span>•</span>
+<span>Legal</span>
+<span>•</span>
+<span>Safety Policy</span>
+</div>
+</footer>
+<script>
+        // Form interaction micro-effects
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "Processing Submission...";
+            btn.classList.add('opacity-50');
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                alert("Report submitted securely to the Neutral Mediation Team.");
+                btn.innerText = originalText;
+                btn.classList.remove('opacity-50');
+                btn.disabled = false;
+                form.reset();
+            }, 1500);
+        });
+
+        // Hover effect for policy links
+        const policyLinks = document.querySelectorAll('ul li a');
+        policyLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => link.style.paddingLeft = '4px');
+            link.addEventListener('mouseleave', () => link.style.paddingLeft = '0px');
+            link.style.transition = 'padding 0.2s ease-in-out';
+        });
+    </script>
+</body></html>

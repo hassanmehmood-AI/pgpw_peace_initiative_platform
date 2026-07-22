@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Forums | PeaceGangPeaceWorld</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#dfe0e0",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#000000",
+                        "tertiary": "#000000",
+                        "surface-container-high": "#e2e8f8",
+                        "surface-container-low": "#f0f3ff",
+                        "inverse-on-surface": "#ebf1ff",
+                        "on-primary-container": "#848484",
+                        "tertiary-fixed": "#e1e2e4",
+                        "secondary-fixed": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#191c1e",
+                        "outline-variant": "#cfc4c5",
+                        "primary-container": "#1b1b1b",
+                        "surface-tint": "#5e5e5e",
+                        "on-surface": "#151c27",
+                        "inverse-surface": "#2a313d",
+                        "surface-bright": "#f9f9ff",
+                        "on-surface-variant": "#4c4546",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#191c1e",
+                        "surface-variant": "#dce2f3",
+                        "on-background": "#151c27",
+                        "surface-container": "#e7eefe",
+                        "background": "#f9f9ff",
+                        "surface": "#f9f9ff",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-primary-fixed": "#1b1b1b",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-tertiary-container": "#828486",
+                        "surface-container-highest": "#dce2f3",
+                        "outline": "#7e7576",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-secondary-container": "#616363",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#c6c6c6",
+                        "on-secondary-fixed-variant": "#454747",
+                        "secondary": "#5d5f5f",
+                        "surface-dim": "#d3daea",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "tertiary-fixed-dim": "#c5c6c8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "0.5rem",
+                        "stack-md": "1rem",
+                        "container-max": "1280px",
+                        "gutter": "1.5rem",
+                        "margin-mobile": "1rem",
+                        "margin-desktop": "2.5rem",
+                        "stack-lg": "2rem"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "caption": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "label-bold": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "1.4", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface-container-lowest top-0 sticky z-50 shadow-sm border-b-2 border-primary">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="PeaceGangPeaceWorld Logo" class="h-10 w-10 object-contain rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIibM3eLZk04du1Xmv3p8WTu2QxXhI0CIQwcMXjIJ6V-3xMLDj6JIJiwKbKliMQQ6H0e1-QGSKrXeOA9NL2_BIo17mOSPAF8OV9L5WxdAYE1p7ApQtkxKoKDstYOMQmIIicr9Yk8pYrJCcAugUYnFKg2ioQqz9TCpRRgcBSPamIDMV-1mLkN-ba_7p5U_zNGBB2HRbiYjDtB2Gd1hB9gpFKDV1mfLbPjjchniaIPNhhaKh_LQ7RV1lfQMKSZL2ANphVKlubJpYB7g"/>
+<a class="font-display-lg text-headline-md font-extrabold text-primary" href="../pgpw_landing_page/code.html">PeaceGangPeaceWorld</a>
+</div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:bg-secondary-fixed hover:text-primary transition-all duration-200 ease-in-out px-3 py-2 rounded-md" href="../pgpw_landing_page/code.html">Home</a>
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary px-3 py-2" href="#">Forums</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:bg-secondary-fixed hover:text-primary transition-all duration-200 ease-in-out px-3 py-2 rounded-md" href="#">Members</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:bg-secondary-fixed hover:text-primary transition-all duration-200 ease-in-out px-3 py-2 rounded-md" href="../pgpw_safety_reporting/code.html">Peace Resources</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:bg-secondary-fixed hover:text-primary transition-all duration-200 ease-in-out px-3 py-2 rounded-md" href="../pgpw_about_page/code.html">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-primary hover:text-secondary p-2 transition-all duration-200 ease-in-out rounded-full hover:bg-secondary-fixed" data-icon="search">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="text-primary hover:text-secondary p-2 transition-all duration-200 ease-in-out rounded-full hover:bg-secondary-fixed" data-icon="mail">
+<span class="material-symbols-outlined">mail</span>
+</button>
+<button class="text-primary hover:text-secondary p-2 transition-all duration-200 ease-in-out rounded-full hover:bg-secondary-fixed" data-icon="notifications">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="font-label-bold text-label-bold bg-white text-primary border-2 border-primary px-4 py-2 rounded-md hover:bg-secondary-fixed transition-colors">Login</button>
+<button onclick="window.location.href='../pgpw_registration_flow/code.html'" class="font-label-bold text-label-bold bg-primary text-on-primary px-4 py-2 rounded-md hover:bg-primary/90 transition-colors">Sign Up</button>
+</div>
+</div>
+</nav>
+<div class="flex flex-1 max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop py-stack-lg gap-gutter">
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full">
+<header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-stack-lg gap-stack-md border-b border-outline-variant pb-stack-md">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Community Forums</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Connect, discuss, and build peace together.</p>
+</div>
+<div class="flex gap-stack-sm w-full md:w-auto">
+<button onclick="window.location.href='../pgpw_news_feed/code.html'" class="flex-1 md:flex-none flex items-center justify-center gap-2 bg-primary text-on-primary font-label-bold text-label-bold px-4 py-3 rounded-md hover:bg-primary/90 transition-colors shadow-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+                        New Topic
+                    </button>
+</div>
+</header>
+<!-- Forum Controls -->
+<div class="flex flex-col md:flex-row gap-stack-md mb-stack-lg items-center bg-surface-container-lowest p-stack-md rounded-lg border border-outline-variant">
+<div class="relative w-full md:w-96 flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2 border border-outline-variant rounded-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-body-md text-body-md bg-white" placeholder="Search forums, topics, or members..." type="text"/>
+</div>
+<div class="flex gap-stack-sm w-full md:w-auto overflow-x-auto pb-2 md:pb-0 hide-scrollbar">
+<button class="whitespace-nowrap px-4 py-2 bg-primary text-on-primary rounded-full font-label-bold text-label-bold border-2 border-primary">All Categories</button>
+<button class="whitespace-nowrap px-4 py-2 bg-white text-primary rounded-full font-label-bold text-label-bold border-2 border-outline-variant hover:border-primary transition-colors">Following</button>
+<button class="whitespace-nowrap px-4 py-2 bg-white text-primary rounded-full font-label-bold text-label-bold border-2 border-outline-variant hover:border-primary transition-colors">Popular</button>
+</div>
+</div>
+<!-- Bento Grid Layout for Categories -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Category Card 1 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg p-stack-md hover:border-primary transition-all duration-200 group flex flex-col h-full">
+<div class="flex items-start justify-between mb-4">
+<div class="p-3 bg-surface-container-low rounded-lg text-primary">
+<span class="material-symbols-outlined text-3xl">handshake</span>
+</div>
+<span class="font-caption text-caption bg-surface-container-high text-on-surface-variant px-2 py-1 rounded-md">1.2k Topics</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-surface-tint transition-colors">Peace and Unity</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">Discussions focused on bridging divides, fostering understanding, and promoting non-violent communication across communities.</p>
+<div class="border-t border-outline-variant pt-4 mt-auto">
+<div class="flex justify-between items-center mb-3">
+<span class="font-label-bold text-label-bold text-on-surface-variant">Latest:</span>
+<span class="font-caption text-caption text-outline">2h ago</span>
+</div>
+<a class="block font-body-md text-body-md text-primary hover:underline line-clamp-1 mb-4" href="../pgpw_news_feed/code.html">Organizing the upcoming neighborhood dialogue series</a>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full object-cover border border-outline-variant" data-alt="A modern, high-contrast black and white portrait of a community mediator with a subtle halftone texture in the background, conveying professionalism and neutrality. The lighting is crisp and the subject looks approachable yet authoritative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkyXck9Ua1ULlBzWckHeMcFJv4Qt1QMPpTqG17-9FfZ_FXz02afEk-OYCU944viMxdvI9AHJ6EtFVvUHu2y1jwqc2DgmTux_H6nz40NlXGZgozhWdu9wWSMYLfPDpbl3nk8UQ9lkOBkKMdlAWdlZxyeD36CoiLCKhA_GTgRPVRSrU-8OWY28rzVyeDAX0zWZw2Kg39GvRdYx1TZ1lbIS9AjK19h-_DacNKAJ10SE27W_uS5QwOz7H1GEUoiRc4zpwqsnCdI8Nb868"/>
+<span class="font-caption text-caption text-on-surface-variant">Mod: @SarahP</span>
+</div>
+<div class="flex gap-1">
+<span class="w-2 h-2 rounded-full bg-primary" title="Active Community Badge"></span>
+<span class="w-2 h-2 rounded-full bg-outline" title="Support Badge"></span>
+</div>
+</div>
+</div>
+</article>
+<!-- Category Card 2 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg p-stack-md hover:border-primary transition-all duration-200 group flex flex-col h-full relative overflow-hidden">
+<!-- Subtle texture overlay -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(circle,rgba(0,0,0,0.05)_1px,transparent_1px)] bg-[size:4px_4px] opacity-50 rounded-bl-full pointer-events-none"></div>
+<div class="flex items-start justify-between mb-4 relative z-10">
+<div class="p-3 bg-surface-container-low rounded-lg text-primary">
+<span class="material-symbols-outlined text-3xl">forum</span>
+</div>
+<span class="font-caption text-caption bg-surface-container-high text-on-surface-variant px-2 py-1 rounded-md">8.5k Topics</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-surface-tint transition-colors relative z-10">General Discussion</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1 relative z-10">The main hub for open chat, daily check-ins, and topics that don't fit into specific categories. Keep it respectful.</p>
+<div class="border-t border-outline-variant pt-4 mt-auto relative z-10">
+<div class="flex justify-between items-center mb-3">
+<span class="font-label-bold text-label-bold text-on-surface-variant">Latest:</span>
+<span class="font-caption text-caption text-outline">5m ago</span>
+</div>
+<a class="block font-body-md text-body-md text-primary hover:underline line-clamp-1 mb-4" href="../pgpw_news_feed/code.html">Weekend plans: What's everyone doing to unwind?</a>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full object-cover border border-outline-variant" data-alt="A minimalist grayscale avatar showing an abstract geometric representation of a person, styled with heavy structural lines typical of brutalist design, serving as a generic moderator profile picture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASGq_sz4KvD-7TRZy6biwAPB9iPfah6887HnUE9edM5oOHoBbEo3rPiQMxU4voZlBwGVa5Ns4uduYyYMPOEfKf4XG8S1JZiehOMKcx3xPOcFAWeWdbfxU9iFeAnuruHprowz5aSjs2Zy49KnzewYnEFMaC-dQUetyUtlz5GApSYh7r_gQ3MFmpPCnvHWg5pmMexwnBRhTSziH3-Z5pZ2bzuXe71oHw7nwWdWE2AJ3PhxRXp6RQquI83vnhty4uDGQDmEi1p8OhKcY"/>
+<span class="font-caption text-caption text-on-surface-variant">Mod: @System</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Category Card 3 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg p-stack-md hover:border-primary transition-all duration-200 group flex flex-col h-full">
+<div class="flex items-start justify-between mb-4">
+<div class="p-3 bg-surface-container-low rounded-lg text-primary">
+<span class="material-symbols-outlined text-3xl">diversity_3</span>
+</div>
+<span class="font-caption text-caption bg-surface-container-high text-on-surface-variant px-2 py-1 rounded-md">430 Topics</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-surface-tint transition-colors">Conflict Resolution</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">A mediated space for addressing grievances, seeking advice on disputes, and learning de-escalation tactics.</p>
+<div class="border-t border-outline-variant pt-4 mt-auto">
+<div class="flex justify-between items-center mb-3">
+<span class="font-label-bold text-label-bold text-on-surface-variant">Latest:</span>
+<span class="font-caption text-caption text-outline">1d ago</span>
+</div>
+<a class="block font-body-md text-body-md text-primary hover:underline line-clamp-1 mb-4" href="../pgpw_news_feed/code.html">Resources for managing workplace disputes effectively</a>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full object-cover border border-outline-variant" data-alt="A striking black and white portrait of a mediator, featuring deep blacks and pristine whites. The lighting is soft but high-key, creating a serene mood against a clean, modern architectural background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq72Gb4J25HWBZs9K89LqrsKr6eMdMrXMgwHmjBuXI6WEHlV1WU6AHg4tQES_fILchHzf9vFy1XIMjsqhkyusj_Q3YrA85xddybRKGXfrdeWucwWEb8wmD30AzZODAvzQNFUL1Qoq-96YwJI1Q2jVBncjREcGWv2cF6VB6OMUWOXjeocdkB4OlwnsM0_awMTCnr_R2wua2GVxLktGmQAWqbzlAxChjKvp9I8y1nNnNbqbIRlO04kObdrg4_1RASVDEm__zWCKi4ys"/>
+<span class="font-caption text-caption text-on-surface-variant">Mod: @MediatorJoe</span>
+</div>
+<div class="flex gap-1">
+<span class="px-2 py-0.5 rounded-full border-2 border-primary text-[10px] font-bold text-primary bg-primary/5 uppercase tracking-wide">Official</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-primary full-width bottom-0 border-t-4 border-primary mt-auto">
+<div class="w-full py-stack-lg px-margin-desktop flex flex-col items-center gap-stack-md">
+<h2 class="font-headline-md text-headline-md text-on-primary">PeaceGangPeaceWorld</h2>
+<div class="flex gap-4">
+<a class="font-caption text-caption text-on-primary opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-opacity duration-200" href="#">Quick Links</a>
+<a class="font-caption text-caption text-on-primary opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-opacity duration-200" href="../pgpw_safety_reporting/code.html">Crisis Resources</a>
+<a class="font-caption text-caption text-on-primary opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-opacity duration-200" href="#">Legal</a>
+<a class="font-caption text-caption text-on-primary opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-opacity duration-200" href="../pgpw_safety_reporting/code.html">Safety Policy</a>
+</div>
+<p class="font-caption text-caption text-on-primary opacity-80 text-center max-w-2xl">
+                © 2024 PeaceGangPeaceWorld. All Rights Reserved. Peace-building disclaimer: This platform is dedicated to non-violence and mediator neutrality.
+            </p>
+</div>
+</footer>
+</body></html>

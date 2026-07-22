@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Registration - PeaceGangPeaceWorld</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#dfe0e0",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#000000",
+                        "tertiary": "#000000",
+                        "surface-container-high": "#e2e8f8",
+                        "surface-container-low": "#f0f3ff",
+                        "inverse-on-surface": "#ebf1ff",
+                        "on-primary-container": "#848484",
+                        "tertiary-fixed": "#e1e2e4",
+                        "secondary-fixed": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#191c1e",
+                        "outline-variant": "#cfc4c5",
+                        "primary-container": "#1b1b1b",
+                        "surface-tint": "#5e5e5e",
+                        "on-surface": "#151c27",
+                        "inverse-surface": "#2a313d",
+                        "surface-bright": "#f9f9ff",
+                        "on-surface-variant": "#4c4546",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#191c1e",
+                        "surface-variant": "#dce2f3",
+                        "on-background": "#151c27",
+                        "surface-container": "#e7eefe",
+                        "background": "#f9f9ff",
+                        "surface": "#f9f9ff",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-primary-fixed": "#1b1b1b",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-tertiary-container": "#828486",
+                        "surface-container-highest": "#dce2f3",
+                        "outline": "#7e7576",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-secondary-container": "#616363",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#c6c6c6",
+                        "on-secondary-fixed-variant": "#454747",
+                        "secondary": "#5d5f5f",
+                        "surface-dim": "#d3daea",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "tertiary-fixed-dim": "#c5c6c8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "0.5rem",
+                        "stack-md": "1rem",
+                        "container-max": "1280px",
+                        "gutter": "1.5rem",
+                        "margin-mobile": "1rem",
+                        "margin-desktop": "2.5rem",
+                        "stack-lg": "2rem"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "caption": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "label-bold": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "1.4", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .halftone-bg {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 8px 8px;
+        }
+        .step-transition {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .step-hidden {
+            opacity: 0;
+            transform: translateX(20px);
+            pointer-events: none;
+            position: absolute;
+            visibility: hidden;
+        }
+        .step-visible {
+            opacity: 1;
+            transform: translateX(0);
+            position: relative;
+            visibility: visible;
+        }
+        /* Custom Community Colors */
+        .crip-blue { border-color: #0000FF; color: #0000FF; background-color: rgba(0, 0, 255, 0.05); }
+        .crip-blue.selected { background-color: rgba(0, 0, 255, 0.15); border-width: 2px; }
+        .blood-red { border-color: #FF0000; color: #FF0000; background-color: rgba(255, 0, 0, 0.05); }
+        .blood-red.selected { background-color: rgba(255, 0, 0, 0.15); border-width: 2px; }
+        .latin-king-yellow { border-color: #FFD700; color: #B8860B; background-color: rgba(255, 215, 0, 0.05); }
+        .latin-king-yellow.selected { background-color: rgba(255, 215, 0, 0.15); border-width: 2px; }
+        .deceptacon-purple { border-color: #800080; color: #800080; background-color: rgba(128, 0, 128, 0.05); }
+        .deceptacon-purple.selected { background-color: rgba(128, 0, 128, 0.15); border-width: 2px; }
+        .neutral-gray { border-color: #4B5563; color: #4B5563; background-color: rgba(75, 85, 99, 0.05); }
+        .neutral-gray.selected { background-color: rgba(75, 85, 99, 0.15); border-width: 2px; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar Suppressed for Linear/Transactional Flow (Registration) -->
+<main class="flex-grow flex items-center justify-center p-margin-mobile md:p-margin-desktop relative overflow-hidden">
+<!-- Decorative Ambient Background -->
+<div class="absolute inset-0 halftone-bg opacity-30 pointer-events-none"></div>
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<div class="w-full max-w-3xl bg-surface-container-lowest border border-outline-variant shadow-[0_0_0_1px_rgba(0,0,0,0.05)] rounded-lg relative z-10 flex flex-col min-h-[600px]">
+<!-- Header & Progress -->
+<div class="p-8 border-b border-outline-variant flex flex-col gap-stack-md bg-surface-bright rounded-t-lg">
+<div class="flex justify-between items-center">
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">Join PeaceGangPeaceWorld</h1>
+<span class="font-caption text-caption text-on-surface-variant bg-surface-container-high px-3 py-1 rounded-full border border-outline-variant">Step <span id="current-step-display">1</span> of 4</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="h-full bg-primary transition-all duration-500 ease-in-out" id="progress-bar-fill" style="width: 25%;"></div>
+</div>
+<div class="flex justify-between font-caption text-caption text-on-surface-variant px-1 mt-1">
+<span class="text-primary font-bold">Affiliation</span>
+<span>Profile</span>
+<span>Verification</span>
+<span>Agreement</span>
+</div>
+</div>
+<!-- Steps Container -->
+<div class="flex-grow p-8 relative overflow-hidden flex flex-col">
+<!-- Step 1: Select Community -->
+<div class="step-transition step-visible flex-grow flex flex-col h-full" id="step-1">
+<div class="mb-stack-lg">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Select Your Affiliation</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Identify your background to help us build bridges. This platform represents neutral ground; all affiliations are respected and expected to maintain peace.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md flex-grow">
+<!-- Affiliation Options -->
+<button class="affiliation-btn crip-blue border rounded-lg p-4 flex flex-col items-start gap-2 hover:shadow-[0_0_0_1px_#000000] transition-all text-left" data-value="crip" type="button">
+<span class="font-label-bold text-label-bold">Crip</span>
+<span class="font-caption text-caption opacity-80">Community Representative</span>
+</button>
+<button class="affiliation-btn blood-red border rounded-lg p-4 flex flex-col items-start gap-2 hover:shadow-[0_0_0_1px_#000000] transition-all text-left" data-value="blood" type="button">
+<span class="font-label-bold text-label-bold">Blood</span>
+<span class="font-caption text-caption opacity-80">Community Representative</span>
+</button>
+<button class="affiliation-btn latin-king-yellow border rounded-lg p-4 flex flex-col items-start gap-2 hover:shadow-[0_0_0_1px_#000000] transition-all text-left" data-value="latin_king" type="button">
+<span class="font-label-bold text-label-bold">Latin King</span>
+<span class="font-caption text-caption opacity-80">Community Representative</span>
+</button>
+<button class="affiliation-btn deceptacon-purple border rounded-lg p-4 flex flex-col items-start gap-2 hover:shadow-[0_0_0_1px_#000000] transition-all text-left" data-value="deceptacon" type="button">
+<span class="font-label-bold text-label-bold">Deceptacon</span>
+<span class="font-caption text-caption opacity-80">Community Representative</span>
+</button>
+<div class="col-span-1 md:col-span-2 my-2 flex items-center gap-4">
+<div class="h-px bg-outline-variant flex-grow"></div>
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-widest">Or</span>
+<div class="h-px bg-outline-variant flex-grow"></div>
+</div>
+<button class="affiliation-btn neutral-gray border rounded-lg p-4 flex flex-col items-start gap-2 hover:shadow-[0_0_0_1px_#000000] transition-all text-left" data-value="independent" type="button">
+<span class="font-label-bold text-label-bold">Independent / No Affiliation</span>
+<span class="font-caption text-caption opacity-80">Citizen</span>
+</button>
+<button class="affiliation-btn neutral-gray border rounded-lg p-4 flex flex-col items-start gap-2 hover:shadow-[0_0_0_1px_#000000] transition-all text-left" data-value="supporter" type="button">
+<span class="font-label-bold text-label-bold">Community Supporter</span>
+<span class="font-caption text-caption opacity-80">Ally</span>
+</button>
+<button class="affiliation-btn neutral-gray border rounded-lg p-4 flex flex-col items-start gap-2 hover:shadow-[0_0_0_1px_#000000] transition-all text-left" data-value="volunteer" type="button">
+<span class="font-label-bold text-label-bold">Peace Volunteer</span>
+<span class="font-caption text-caption opacity-80">Active Contributor</span>
+</button>
+<button class="affiliation-btn neutral-gray border rounded-lg p-4 flex flex-col items-start gap-2 hover:shadow-[0_0_0_1px_#000000] transition-all text-left" data-value="organization" type="button">
+<span class="font-label-bold text-label-bold">Organization Representative</span>
+<span class="font-caption text-caption opacity-80">NGO / Govt / Charity</span>
+</button>
+</div>
+</div>
+<!-- Step 2: Placeholder for Profile Details (Not requested in detail, but needed for multi-step) -->
+<div class="step-transition step-hidden flex-grow flex flex-col h-full" id="step-2">
+<div class="mb-stack-lg">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Basic Information</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Set up your identity on the platform.</p>
+</div>
+<div class="flex flex-col gap-stack-md">
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold text-primary">Username</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:border-2 font-body-md text-body-md" placeholder="Enter username" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold text-primary">Email Address</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:border-2 font-body-md text-body-md" placeholder="name@example.com" type="email"/>
+</div>
+</div>
+</div>
+<!-- Step 3: Placeholder for Verification -->
+<div class="step-transition step-hidden flex-grow flex flex-col h-full" id="step-3">
+<div class="mb-stack-lg">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Verification</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Ensure platform integrity.</p>
+</div>
+<div class="flex flex-col gap-stack-md flex-grow items-center justify-center">
+<span class="material-symbols-outlined text-[64px] text-outline mb-4" data-icon="verified_user">verified_user</span>
+<p class="font-body-md text-body-md text-center max-w-sm">We require a quick verification step to maintain a secure and accountable environment.</p>
+<button class="bg-surface border-2 border-primary text-primary px-6 py-3 rounded-lg font-label-bold text-label-bold hover:bg-surface-container-high transition-colors">Send Code to Email</button>
+</div>
+</div>
+<!-- Step 4: Community Agreement -->
+<div class="step-transition step-hidden flex-grow flex flex-col h-full" id="step-4">
+<div class="mb-stack-lg">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Community Agreement</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">The foundation of Radical Neutrality.</p>
+</div>
+<div class="bg-surface border border-outline-variant p-6 rounded-lg mb-6 flex-grow overflow-y-auto">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Terms of Engagement</h3>
+<ul class="flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant list-disc pl-5">
+<li><strong>Absolute Non-Violence:</strong> This platform is a sanctuary. Threats, inciting violence, or organizing hostile actions are strictly prohibited and will result in immediate permanent banning and potential reporting to authorities.</li>
+<li><strong>Respectful Dialogue:</strong> Disagreements are expected, disrespect is not. Engage in constructive conversation regardless of affiliation.</li>
+<li><strong>No Doxxing:</strong> Sharing personal information of others without explicit consent is forbidden.</li>
+<li><strong>Moderator Authority:</strong> Our mediators and moderators have final say in dispute resolution on the platform. You agree to abide by their rulings to maintain platform peace.</li>
+</ul>
+</div>
+<label class="flex items-start gap-4 cursor-pointer group mt-auto pt-4 border-t border-outline-variant">
+<div class="relative flex items-center justify-center mt-1">
+<input class="peer appearance-none w-6 h-6 border-2 border-outline rounded bg-surface-container-lowest checked:bg-primary checked:border-primary transition-all" id="agreement-checkbox" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-on-primary text-[18px] opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity" data-icon="check">check</span>
+</div>
+<span class="font-body-md text-body-md text-primary group-hover:text-tertiary transition-colors">I acknowledge and agree to the Terms of Engagement. I understand that violation of these terms compromises the neutral ground and will result in expulsion.</span>
+</label>
+</div>
+</div>
+<!-- Navigation Footer -->
+<div class="p-8 border-t border-outline-variant bg-surface-bright rounded-b-lg flex justify-between items-center mt-auto">
+<button class="px-6 py-3 border-2 border-primary text-primary font-label-bold text-label-bold rounded-lg hover:bg-surface-container-low transition-colors invisible" id="btn-prev">Back</button>
+<button class="px-6 py-3 bg-primary text-on-primary font-label-bold text-label-bold rounded-lg hover:bg-primary-container transition-colors ml-auto shadow-[0_0_0_0_rgba(0,0,0,0.08)] hover:shadow-lg" disabled="" id="btn-next">Continue</button>
+</div>
+</div>
+</main>
+<!-- Footer Suppressed for Transactional Flow -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentStep = 1;
+            const totalSteps = 4;
+            let affiliationSelected = false;
+
+            const btnNext = document.getElementById('btn-next');
+            const btnPrev = document.getElementById('btn-prev');
+            const stepDisplay = document.getElementById('current-step-display');
+            const progressBarFill = document.getElementById('progress-bar-fill');
+            const agreementCheckbox = document.getElementById('agreement-checkbox');
+            const affiliationBtns = document.querySelectorAll('.affiliation-btn');
+
+            // Affiliation Selection Logic
+            affiliationBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    affiliationBtns.forEach(b => {
+                        b.classList.remove('selected');
+                        // Reset neutral border for selected state styling
+                        if(b.classList.contains('crip-blue')) b.style.borderColor = '';
+                    });
+                    this.classList.add('selected');
+                    affiliationSelected = true;
+                    updateNextButtonState();
+                });
+            });
+
+            // Agreement Checkbox Logic
+            agreementCheckbox.addEventListener('change', updateNextButtonState);
+
+            function updateNextButtonState() {
+                if (currentStep === 1) {
+                    btnNext.disabled = !affiliationSelected;
+                } else if (currentStep === 4) {
+                    btnNext.disabled = !agreementCheckbox.checked;
+                    btnNext.textContent = agreementCheckbox.checked ? "Complete Registration" : "Continue";
+                } else {
+                    btnNext.disabled = false; // Add actual validation for steps 2/3 if needed
+                    btnNext.textContent = "Continue";
+                }
+                
+                if(btnNext.disabled) {
+                    btnNext.classList.add('opacity-50', 'cursor-not-allowed');
+                } else {
+                    btnNext.classList.remove('opacity-50', 'cursor-not-allowed');
+                }
+            }
+
+            function updateUI() {
+                // Update Steps visibility
+                for (let i = 1; i <= totalSteps; i++) {
+                    const stepEl = document.getElementById(`step-${i}`);
+                    if (i === currentStep) {
+                        stepEl.classList.remove('step-hidden');
+                        stepEl.classList.add('step-visible');
+                    } else {
+                        stepEl.classList.remove('step-visible');
+                        stepEl.classList.add('step-hidden');
+                    }
+                }
+
+                // Update Header & Progress
+                stepDisplay.textContent = currentStep;
+                progressBarFill.style.width = `${(currentStep / totalSteps) * 100}%`;
+
+                // Update Buttons
+                if (currentStep === 1) {
+                    btnPrev.classList.add('invisible');
+                } else {
+                    btnPrev.classList.remove('invisible');
+                }
+
+                if (currentStep === totalSteps) {
+                    btnNext.textContent = agreementCheckbox.checked ? "Complete Registration" : "Continue";
+                } else {
+                    btnNext.textContent = "Continue";
+                }
+
+                updateNextButtonState();
+            }
+
+            btnNext.addEventListener('click', () => {
+                if (currentStep < totalSteps) {
+                    currentStep++;
+                    updateUI();
+                } else {
+                    // Submit form logic here
+                    btnNext.innerHTML = `<span class="material-symbols-outlined animate-spin" data-icon="progress_activity">progress_activity</span>`;
+                    setTimeout(() => {
+                        alert("Registration Complete. Welcome to PeaceGangPeaceWorld.");
+                        window.location.href = '../pgpw_news_feed/code.html';
+                    }, 1000);
+                }
+            });
+
+            btnPrev.addEventListener('click', () => {
+                if (currentStep > 1) {
+                    currentStep--;
+                    updateUI();
+                }
+            });
+
+            // Initial setup
+            updateNextButtonState();
+        });
+    </script>
+</body></html>

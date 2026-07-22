@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PeaceGangPeaceWorld | Mobile News Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e1e2e4",
+                    "outline-variant": "#cfc4c5",
+                    "secondary-container": "#dfe0e0",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-background": "#151c27",
+                    "primary": "#000000",
+                    "on-tertiary-container": "#828486",
+                    "inverse-surface": "#2a313d",
+                    "outline": "#7e7576",
+                    "surface-container": "#e7eefe",
+                    "surface-bright": "#f9f9ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e2e8f8",
+                    "on-primary-fixed": "#1b1b1b",
+                    "secondary": "#5d5f5f",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "on-surface-variant": "#4c4546",
+                    "background": "#f9f9ff",
+                    "tertiary": "#000000",
+                    "surface-container-low": "#f0f3ff",
+                    "on-surface": "#151c27",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#5e5e5e",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "tertiary-container": "#191c1e",
+                    "on-primary-container": "#848484",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#dce2f3",
+                    "tertiary-fixed-dim": "#c5c6c8",
+                    "surface": "#f9f9ff",
+                    "on-secondary-container": "#616363",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#474747",
+                    "on-secondary-fixed-variant": "#454747",
+                    "surface-dim": "#d3daea",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#c6c6c6",
+                    "on-tertiary-fixed": "#191c1e",
+                    "primary-fixed": "#e2e2e2",
+                    "surface-variant": "#dce2f3",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "primary-container": "#1b1b1b",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "inverse-on-surface": "#ebf1ff",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "2rem",
+                    "gutter": "1.5rem",
+                    "stack-md": "1rem",
+                    "margin-mobile": "1rem",
+                    "margin-desktop": "2.5rem",
+                    "stack-sm": "0.5rem",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "caption": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["20px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { -webkit-tap-highlight-color: transparent; }
+        .halftone-header {
+            background-image: radial-gradient(#000 10%, transparent 11%), radial-gradient(#000 10%, transparent 11%);
+            background-size: 8px 8px;
+            background-position: 0 0, 4px 4px;
+            opacity: 0.05;
+        }
+        .custom-scrollbar::-webkit-scrollbar { display: none; }
+        .nav-active-indicator { position: relative; }
+        .nav-active-indicator::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background: black;
+            border-radius: 50%;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar -->
+<header class="bg-surface-container-lowest sticky top-0 z-50 border-b-2 border-primary w-full flex justify-between items-center px-margin-mobile py-4">
+<h1 class="font-display-lg text-headline-md font-extrabold text-primary">PeaceGang</h1>
+<div class="flex items-center gap-4">
+<button class="p-2 transition-all duration-200 ease-in-out hover:bg-secondary-fixed">
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+</button>
+<button class="p-2 transition-all duration-200 ease-in-out hover:bg-secondary-fixed">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+</button>
+<div class="w-8 h-8 bg-primary rounded-full overflow-hidden border border-outline">
+<img class="w-full h-full object-cover" data-alt="A sharp, minimalist close-up portrait of a peace mediator with a neutral expression, captured in high-contrast black and white photography. The background is a crisp white studio setting with professional softbox lighting that emphasizes clean structural lines and a modern urban aesthetic consistent with the Radical Neutrality design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPUBqZ37xsF2vajhaOa7WY54aqm1Y_m_xSKbflx4SoYmIhCDoCz9Goqy3V_5QEDhuegcvRL4KmSPVYblO_7_biW4HyWIs8v4aeLRGZzLWbb537wAVqrc_4EreXRdmzZjQHGCJlthXBeKK7r__0kpmpeMJvncKhdtwwyGPWtcnCckq-xsd28kd92_MwGU7wmRQMuTFctDlt1YGszQBBAAFox9-w1GVBClHMMA52GvQ0y3PWXOd8UoxkXXTHBQ6N698RvL11pdfuCnc"/>
+</div>
+</div>
+</header>
+<!-- Side Drawer (Mobile Overlay) -->
+<div class="fixed inset-0 z-[60] pointer-events-none transition-opacity duration-300 opacity-0 bg-black/50" id="side-drawer">
+<aside class="absolute top-0 left-0 h-screen w-72 bg-surface-container-low border-r border-outline-variant translate-x-[-100%] transition-transform duration-300 pointer-events-auto flex flex-col py-stack-md overflow-y-auto">
+<div class="px-6 py-4 flex items-center gap-4 mb-4">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-on-primary font-display-lg">P</div>
+<div>
+<h2 class="font-label-bold text-label-bold text-primary">User Summary</h2>
+<p class="text-caption opacity-70">Peace Builder</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="bg-primary text-on-primary rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="rss_feed">rss_feed</span>
+<span class="font-label-bold">News Feed</span>
+</a>
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-bold">Profile</span>
+</a>
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-label-bold">Friends</span>
+</a>
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 transition-all" href="../pgpw_forum_categories_mobile/code.html">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="font-label-bold">Forums</span>
+</a>
+<hr class="mx-6 my-4 border-outline-variant"/>
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+<span class="font-label-bold">Peace Programs</span>
+</a>
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 transition-all" href="../pgpw_admin_dashboard_mobile/code.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-bold">Settings</span>
+</a>
+</nav>
+</aside>
+</div>
+<!-- Main Content Canvas -->
+<main class="max-w-md mx-auto px-margin-mobile pt-stack-md pb-32">
+<!-- Story Bar / Music Updates -->
+<section class="mb-stack-lg overflow-x-auto flex gap-4 custom-scrollbar pb-2">
+<div class="flex-shrink-0 flex flex-col items-center gap-1">
+<button class="w-16 h-16 rounded-full border-2 border-primary p-0.5 flex items-center justify-center bg-white overflow-hidden shadow-sm">
+<span class="material-symbols-outlined text-primary text-[32px]" data-icon="add">add</span>
+</button>
+<span class="text-caption font-label-bold">Post</span>
+</div>
+<!-- Dynamic Music Update Stories -->
+<div class="flex-shrink-0 flex flex-col items-center gap-1">
+<div class="w-16 h-16 rounded-full border-2 border-primary p-0.5 overflow-hidden">
+<img class="w-full h-full rounded-full object-cover" data-alt="A stylized urban album cover featuring heavy monochromatic graphic design, abstract halftone textures, and bold typography. The visual style is aggressive yet clean, reflecting a modern peace-building music collective. Dominant black and white colors with a single vibrant blue accent used for a community affiliation marker." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFEvcRdLSBwN6xiAUY6kLMeRMGXNVeDiPZQTTSs_J9B5joOZGveF6H9JUodUJgpnntQRRPEHKxcQG2xT1_xQhhF1gNAUJs7l7AxBPGYW53HulURv2Ops8rWqTNEIVITak2fhRs5FPF9H8mIpoIIbGK7GpethzuHV6mHif8-YUjeQC42USnowQR6p_hNFoV8U4RRXsDb8ZkGkuWA9FDpT7EWHExLhp7o3cETzknw7WA3AR22u0jmJunhyKSuH4t9RndcNa-ES-bgTY"/>
+</div>
+<span class="text-caption font-label-bold truncate w-16 text-center">New Drop</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-1">
+<div class="w-16 h-16 rounded-full border-2 border-primary p-0.5 overflow-hidden">
+<img class="w-full h-full rounded-full object-cover" data-alt="An artistic overhead shot of a peace meditation circle in an urban park, captured in high-contrast black and white. The composition uses radial symmetry and strong shadows to create a sense of focus and calm amidst a busy city environment. The lighting is harsh but controlled, emphasizing the textures of the concrete and grass." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2Oi8OvDkzFzOALDe9shvS2D0PbzZCyFWBD5_7Ua9RKQv-wgzVCcsNIHaBPASC2bEDrlXGAX2orjs7jX0ci77oPBLEHA3Ba9sx8FVLYDOOkGuqfprsV6aIpE3juSbnxktY4xpIAMsJIJTCjXtVeGuTtBAGbtSx30KnI64OeWorLKY3o1a31jQRKv986USEPOn_37itlxeE9PnV6TQjoPyT46tUQUsChrlO31h4SPYfUObHxXTVJOEGdRaRNJXsoLVUbyyc5F7R68E"/>
+</div>
+<span class="text-caption font-label-bold truncate w-16 text-center">Mediators</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-1">
+<div class="w-16 h-16 rounded-full border-2 border-primary p-0.5 overflow-hidden">
+<img class="w-full h-full rounded-full object-cover" data-alt="A minimalist photograph of a high-end recording studio microphone, illuminated by a single directional light source in a dark room. The image is rendered in extreme high-contrast black and white, highlighting the metallic texture and technical precision of the equipment. Part of a professional peace-building music project." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBHP4rb99CiHrz2XUeLf2zU9zGuVc0UIF0FBqrmflZFHGh6VFmTAXFTG8y1Ecn-romQ1_Xc3EHXTNKJE0iRzI7S2T9amiuNdKUmNZcUr8DCHPAYycMjtAnfWPaD1deWYMNnAZ4aRA4s-e4BunLx087b9-GjnU3oh_qq1lpywKXpwC0atRoXs4wMtlMe90zk8ofBzw5d31B9EFW-sBQ0P5zJFF_NFh0r8vFxGwE6XNFfeEPUJDXKxKx9QPu4cu9FwpZIOUppNMg5_8"/>
+</div>
+<span class="text-caption font-label-bold truncate w-16 text-center">Studio</span>
+</div>
+</section>
+<!-- Feed Content -->
+<div class="space-y-stack-md">
+<!-- Peace Building Post Card -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:border-primary transition-all duration-200">
+<div class="p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold">JD</div>
+<div>
+<h3 class="font-label-bold text-on-surface">Jordan DeMarco</h3>
+<p class="text-caption text-on-surface-variant flex items-center gap-1">
+                                2h ago • <span class="text-primary font-bold">Neutral Zone Alpha</span>
+</p>
+</div>
+</div>
+<button class="p-1"><span class="material-symbols-outlined" data-icon="more_vert">more_vert</span></button>
+</div>
+<div class="relative h-64 w-full bg-surface-container-low flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 halftone-header"></div>
+<img class="relative z-10 w-full h-full object-cover" data-alt="A powerful documentary-style photograph of two community leaders shaking hands in front of a giant urban mural of a white dove. The mural is painted in a modern street-art style with bold black outlines. The lighting is natural evening light, casting long shadows. High-contrast monochromatic grading with subtle cyan accents in the mural's details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAH-o5HZDg9fTUJT7fv2iQuitvZBiKffgbkCD_IAPcVv5sLaumssPSC5tsdG1uu7ustxWz4ev76hrD0TsF88MuXar9KUXBsh6xymc8rcC7XAw-AYnOMUpTps7KS_QVPxtxTbzyqMauX7a76_xzanitrGeB0JafCmV_XFfqIU9gxod6W7n_ecNFehdrQtNMQbn7AlhdBySjLn4T2-s9xJhNoaE_KAgqD9UrMlPJzjgr2XW1Wb_BT3niyM0-VYxqS9yJ2ul8dwP_HL8"/>
+</div>
+<div class="p-4">
+<div class="flex gap-2 mb-3">
+<span class="bg-[#00000010] border-2 border-primary px-3 py-1 rounded-full text-primary text-caption font-label-bold">Mediator Update</span>
+<span class="bg-[#0000ff10] border-2 border-blue-600 px-3 py-1 rounded-full text-blue-600 text-caption font-label-bold">Southside Peace</span>
+</div>
+<p class="text-body-md text-on-surface mb-4">Successful negotiations today at the 4th Street hub. Both gangs have agreed to a 72-hour ceasefire while we finalize the community resources program. Peace is possible when we respect the neutral ground. #RadicalNeutrality</p>
+<div class="flex items-center justify-between border-t border-outline-variant pt-4">
+<div class="flex gap-4">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined" data-icon="favorite">favorite</span> <span class="text-caption">452</span></button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span> <span class="text-caption">128</span></button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined" data-icon="share">share</span></button>
+</div>
+<button class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined" data-icon="bookmark">bookmark</span></button>
+</div>
+</div>
+</article>
+<!-- Music Release Bento Card -->
+<article class="bg-primary text-on-primary rounded-lg p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-20 pointer-events-none">
+<span class="material-symbols-outlined text-[120px]" data-icon="music_note">music_note</span>
+</div>
+<div class="relative z-10">
+<span class="text-caption font-label-bold tracking-widest uppercase opacity-70">New Exclusive Track</span>
+<h2 class="font-headline-md text-headline-md mt-1 mb-4">"Concrete Harmony" - PG Beats</h2>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-white flex items-center justify-center rounded-lg shadow-xl">
+<span class="material-symbols-outlined text-primary text-[32px]" data-icon="play_arrow">play_arrow</span>
+</div>
+<div class="flex-1 h-1 bg-white/20 rounded-full overflow-hidden">
+<div class="h-full bg-white w-1/3"></div>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-caption opacity-80">Produced by PeaceGang Audio Collective</p>
+<button class="bg-on-primary text-primary px-4 py-2 rounded-lg font-label-bold text-caption transition-transform active:scale-95">DOWNLOAD</button>
+</div>
+</div>
+</article>
+<!-- Community Event Card -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg p-4 flex gap-4 hover:border-primary transition-all cursor-pointer">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A minimalist architectural photograph of a modern glass and concrete community center at night. The interior is brightly lit with warm light, contrasting with the dark urban surroundings. The composition is clean and geometric, using deep blacks and bright whites to create a professional and welcoming atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo63RRN3ZK1uneEnJbx5xl9XdQM878ZObE73c5iURFK9hBjXYE1tyV5hst7DzZZSR3H7J2cqBj1-F3ZlFwF-fm3zEM5cTN6Rzny8ZqB6NrqoluRP_dcXJNwX1yPiyJDPCuyoAxLizzI7W2KwULeR6OB3XwRAtqpqFpJKbMSV_WFrOeaTLm7DPHIf5aCZeC0rCWQd_i3c3-NQnzrPxoSTeqi0-U-sHo6b73MmlVoQuL-H_F1hlG_X8ADBv38l1596L_dHkC2WDwQMA"/>
+</div>
+<div class="flex-1">
+<span class="text-error font-label-bold text-caption">LIVE EVENT</span>
+<h4 class="font-label-bold text-on-surface">Westside Community Forum</h4>
+<p class="text-caption text-on-surface-variant line-clamp-1">Join the mediator team for an open dialogue session...</p>
+<div class="mt-2 flex items-center gap-4">
+<span class="text-caption flex items-center gap-1 opacity-70"><span class="material-symbols-outlined text-sm" data-icon="group">group</span> 1.2k attending</span>
+<span class="text-caption font-bold text-primary">Join Now</span>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-surface-container-lowest border-t-2 border-primary flex justify-around items-center py-3 px-2 z-50">
+<button class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-all" onclick="toggleDrawer()">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+<span class="text-[10px] font-label-bold">Menu</span>
+</button>
+<a class="flex flex-col items-center gap-1 text-primary nav-active-indicator" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-label-bold">Home</span>
+</a>
+<button class="bg-primary text-on-primary w-12 h-12 rounded-full flex items-center justify-center -translate-y-6 shadow-xl border-4 border-background active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-label-bold">Profile</span>
+</a>
+</nav>
+<!-- Quick Action FAB (Optional Contextual) -->
+<!-- Suppressed on feed as per requirement to use BottomNav Create button -->
+<!-- Footer Disclaimer -->
+<footer class="bg-primary text-on-primary p-margin-mobile pb-24 text-center mt-stack-lg">
+<h2 class="font-headline-md text-headline-md mb-2">PeaceGang</h2>
+<p class="text-caption opacity-60 max-w-xs mx-auto">© 2024 PeaceGangPeaceWorld. Dedicated to non-violence and mediator neutrality. All Rights Reserved.</p>
+<div class="mt-4 flex justify-center gap-4">
+<a class="text-caption font-label-bold underline" href="../pgpw_safety_reporting_mobile/code.html">Safety Policy</a>
+<a class="text-caption font-label-bold underline" href="../pgpw_safety_reporting_mobile/code.html">Crisis Resources</a>
+</div>
+</footer>
+<script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('side-drawer');
+            const aside = drawer.querySelector('aside');
+            
+            if (drawer.classList.contains('opacity-0')) {
+                drawer.classList.remove('opacity-0', 'pointer-events-none');
+                drawer.classList.add('opacity-100');
+                aside.classList.remove('translate-x-[-100%]');
+            } else {
+                drawer.classList.add('opacity-0', 'pointer-events-none');
+                drawer.classList.remove('opacity-100');
+                aside.classList.add('translate-x-[-100%]');
+            }
+        }
+
+        // Close drawer on click outside
+        document.getElementById('side-drawer').addEventListener('click', function(e) {
+            if (e.target === this) toggleDrawer();
+        });
+
+        // Simple feed scroll interaction
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

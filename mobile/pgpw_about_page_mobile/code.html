@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About - PeaceGangPeaceWorld</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .halftone-bg {
+            background-image: radial-gradient(circle, #000 1px, transparent 1px);
+            background-size: 8px 8px;
+            opacity: 0.05;
+        }
+        .radical-neutrality-border {
+            border-bottom: 4px solid #000;
+            border-right: 4px solid #000;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e1e2e4",
+                        "outline-variant": "#cfc4c5",
+                        "secondary-container": "#dfe0e0",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-background": "#151c27",
+                        "primary": "#000000",
+                        "on-tertiary-container": "#828486",
+                        "inverse-surface": "#2a313d",
+                        "outline": "#7e7576",
+                        "surface-container": "#e7eefe",
+                        "surface-bright": "#f9f9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e2e8f8",
+                        "on-primary-fixed": "#1b1b1b",
+                        "secondary": "#5d5f5f",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-surface-variant": "#4c4546",
+                        "background": "#f9f9ff",
+                        "tertiary": "#000000",
+                        "surface-container-low": "#f0f3ff",
+                        "on-surface": "#151c27",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#5e5e5e",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "tertiary-container": "#191c1e",
+                        "on-primary-container": "#848484",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#dce2f3",
+                        "tertiary-fixed-dim": "#c5c6c8",
+                        "surface": "#f9f9ff",
+                        "on-secondary-container": "#616363",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-dim": "#d3daea",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#c6c6c6",
+                        "on-tertiary-fixed": "#191c1e",
+                        "primary-fixed": "#e2e2e2",
+                        "surface-variant": "#dce2f3",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary-container": "#1b1b1b",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "inverse-on-surface": "#ebf1ff",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "2rem",
+                        "gutter": "1.5rem",
+                        "stack-md": "1rem",
+                        "margin-mobile": "1rem",
+                        "margin-desktop": "2.5rem",
+                        "stack-sm": "0.5rem",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "caption": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["20px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation (Mobile Restricted View) -->
+<header class="bg-surface-container-lowest dark:bg-primary-container docked full-width top-0 sticky border-b-2 border-primary dark:border-outline z-50">
+<div class="flex justify-between items-center w-full px-4 py-4 mx-auto max-w-container-max">
+<h1 class="font-display-lg text-headline-md font-extrabold text-primary dark:text-on-primary">PeaceGangPeaceWorld</h1>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary p-2" data-icon="search">search</button>
+<button class="material-symbols-outlined text-primary p-2" data-icon="menu">menu</button>
+</div>
+</div>
+</header>
+<main class="w-full pb-32">
+<!-- Hero Section / Mission -->
+<section class="relative px-4 py-12 overflow-hidden bg-surface-container-lowest border-b border-outline-variant">
+<div class="absolute inset-0 halftone-bg pointer-events-none"></div>
+<div class="relative z-10 space-y-stack-md">
+<span class="inline-block py-1 px-3 bg-primary text-on-primary font-label-bold text-label-bold rounded">OUR MISSION</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">A Radical Ground for Peace.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    PeaceGangPeaceWorld is a neutral bridge engineered to facilitate non-violent resolution and mediator neutrality across urban borders. We use radical transparency and community-led moderation to transform conflict into collaboration.
+                </p>
+<div class="pt-stack-sm">
+<button class="bg-primary text-on-primary px-6 py-3 font-label-bold text-label-bold rounded-lg transition-transform active:scale-95">
+                        Download Vision Paper
+                    </button>
+</div>
+</div>
+</section>
+<!-- Impact Statistics (Bento 2x2 Mobile) -->
+<section class="px-4 py-stack-lg bg-surface">
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Impact Snapshot</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest border border-outline-variant p-4 flex flex-col justify-between h-32">
+<span class="material-symbols-outlined text-primary" data-icon="handshake">handshake</span>
+<div>
+<div class="font-headline-md text-headline-md leading-none">420+</div>
+<div class="font-caption text-caption text-on-surface-variant">Resolutions</div>
+</div>
+</div>
+<div class="bg-primary text-on-primary p-4 flex flex-col justify-between h-32">
+<span class="material-symbols-outlined text-on-primary" data-icon="group">group</span>
+<div>
+<div class="font-headline-md text-headline-md leading-none">12k</div>
+<div class="font-caption text-caption opacity-80">Peace Builders</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-4 flex flex-col justify-between h-32">
+<span class="material-symbols-outlined text-primary" data-icon="public">public</span>
+<div>
+<div class="font-headline-md text-headline-md leading-none">15</div>
+<div class="font-caption text-caption text-on-surface-variant">Territories Joined</div>
+</div>
+</div>
+<div class="bg-surface-container-low border-2 border-primary p-4 flex flex-col justify-between h-32">
+<span class="material-symbols-outlined text-primary" data-icon="shield">shield</span>
+<div>
+<div class="font-headline-md text-headline-md leading-none">0</div>
+<div class="font-caption text-caption text-on-surface-variant">Data Violations</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Anchor -->
+<section class="px-4 py-stack-md">
+<div class="rounded-xl overflow-hidden border-2 border-primary shadow-lg">
+<img class="w-full h-64 object-cover" data-alt="A gritty, cinematic black and white photograph of an urban community garden located between high-rise buildings. The lighting is dramatic, with long shadows and bright highlights, creating a sense of hope and resilience. People of diverse backgrounds are seen working together in a neutral, modern minimalist setting with sharp architectural lines in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCf1LI8f4qEEnPmQMcbauXj3vlmDVJiBlfCscxO6_8xru22bGgPF53FXOVZENA8sXhVborBJ-uvSiZVSbcKqS1pTEHYOL1AsHoRcRqGX9Zo-TREenHPMQ-ICXDS7we35j5yRaNOMokKaY2zJ5NY98ZQ3sItwLQ2KT9fMp7Z1T6FbqRRgOJsxFUwj7mjx-9iNMrpzRs_-SQgRDwoBJjAz6fX9urw3c_CL3FcZOqM28g07HXCNSyywY5KXobaJRixLxG5O5ErCUkXB0"/>
+</div>
+</section>
+<!-- Community Guidelines -->
+<section class="px-4 py-stack-lg">
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Community Code</h3>
+<div class="space-y-4">
+<div class="flex gap-4 p-4 bg-surface-container-lowest border border-outline-variant rounded-lg">
+<div class="flex-shrink-0 w-8 h-8 bg-primary text-on-primary flex items-center justify-center font-label-bold rounded">01</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary mb-1">Radical Neutrality</h4>
+<p class="font-caption text-caption text-on-surface-variant">All members are viewed as equal builders. Territorial claims are suspended within this digital space.</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-surface-container-lowest border border-outline-variant rounded-lg">
+<div class="flex-shrink-0 w-8 h-8 bg-primary text-on-primary flex items-center justify-center font-label-bold rounded">02</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary mb-1">Non-Violent Language</h4>
+<p class="font-caption text-caption text-on-surface-variant">No aggressive rhetoric, slurs, or threats. Communication must be aimed at resolution.</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-surface-container-lowest border border-outline-variant rounded-lg">
+<div class="flex-shrink-0 w-8 h-8 bg-primary text-on-primary flex items-center justify-center font-label-bold rounded">03</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary mb-1">Confidentiality</h4>
+<p class="font-caption text-caption text-on-surface-variant">Discussions within mediator-led forums must stay within the platform to protect all parties.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Safety & Moderation -->
+<section class="px-4 py-stack-lg bg-primary text-on-primary relative overflow-hidden">
+<div class="absolute right-0 top-0 w-32 h-32 halftone-bg opacity-10"></div>
+<h3 class="font-headline-md text-headline-md mb-stack-md">Safety Protocols</h3>
+<div class="space-y-stack-md relative z-10">
+<div class="border-l-4 border-on-primary pl-4">
+<h4 class="font-label-bold text-label-bold text-on-primary">Triple-Layer Moderation</h4>
+<p class="font-caption text-caption opacity-80 mt-1">Our moderation includes AI-driven threat detection, community-appointed "Peace Keepers," and professional mediators for escalations.</p>
+</div>
+<div class="border-l-4 border-on-primary pl-4">
+<h4 class="font-label-bold text-label-bold text-on-primary">Anonymous Reporting</h4>
+<p class="font-caption text-caption opacity-80 mt-1">Secure, end-to-end encrypted reporting channels allow users to flag safety concerns without fear of retaliation.</p>
+</div>
+<div class="pt-stack-md flex gap-4">
+<button onclick="window.location.href='../pgpw_safety_reporting_mobile/code.html'" class="flex-1 bg-on-primary text-primary py-3 rounded font-label-bold text-label-bold">Report Concern</button>
+<button class="flex-1 border-2 border-on-primary text-on-primary py-3 rounded font-label-bold text-label-bold">Privacy Policy</button>
+</div>
+</div>
+</section>
+<!-- Dynamic Content Spacer -->
+<div class="h-16"></div>
+</main>
+<!-- Bottom Navigation Bar (Mobile Primary Shell) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-surface-container-lowest dark:bg-primary-container flex justify-around items-center px-2 py-3 border-t border-outline-variant z-50">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="../pgpw_landing_page_mobile/code.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-label-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="../pgpw_forum_categories_mobile/code.html">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="text-[10px] font-label-bold">Forums</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<div class="bg-secondary-container rounded-full p-2 mb-[-4px]">
+<span class="material-symbols-outlined font-bold" data-icon="info">info</span>
+</div>
+<span class="text-[10px] font-bold">About</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-label-bold">Profile</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-12 px-4 bg-primary text-on-primary flex flex-col items-center gap-8 mb-20">
+<div class="font-headline-md text-headline-md text-on-primary">PeaceGangPeaceWorld</div>
+<div class="grid grid-cols-2 gap-x-12 gap-y-4 w-full max-w-xs">
+<a class="font-caption text-caption opacity-80 hover:opacity-100" href="#">Quick Links</a>
+<a class="font-caption text-caption opacity-80 hover:opacity-100" href="../pgpw_safety_reporting_mobile/code.html">Crisis Resources</a>
+<a class="font-caption text-caption opacity-80 hover:opacity-100" href="#">Legal</a>
+<a class="font-caption text-caption opacity-80 hover:opacity-100" href="../pgpw_safety_reporting_mobile/code.html">Safety Policy</a>
+</div>
+<p class="font-caption text-caption text-center opacity-60 px-4">
+            © 2024 PeaceGangPeaceWorld. All Rights Reserved. Peace-building disclaimer: This platform is dedicated to non-violence and mediator neutrality.
+        </p>
+</footer>
+<script>
+        // Simple micro-interaction for stats counting effect or scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

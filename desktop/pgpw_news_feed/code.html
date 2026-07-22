@@ -1,0 +1,419 @@
+<!DOCTYPE html><html lang="en" class="light" style=""><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@700;800&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#dfe0e0",
+                      "on-tertiary": "#ffffff",
+                      "primary": "#000000",
+                      "tertiary": "#000000",
+                      "surface-container-high": "#e2e8f8",
+                      "surface-container-low": "#f0f3ff",
+                      "inverse-on-surface": "#ebf1ff",
+                      "on-primary-container": "#848484",
+                      "tertiary-fixed": "#e1e2e4",
+                      "secondary-fixed": "#e2e2e2",
+                      "error": "#ba1a1a",
+                      "tertiary-container": "#191c1e",
+                      "outline-variant": "#cfc4c5",
+                      "primary-container": "#1b1b1b",
+                      "surface-tint": "#5e5e5e",
+                      "on-surface": "#151c27",
+                      "inverse-surface": "#2a313d",
+                      "surface-bright": "#f9f9ff",
+                      "on-surface-variant": "#4c4546",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed": "#e2e2e2",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed": "#191c1e",
+                      "surface-variant": "#dce2f3",
+                      "on-background": "#151c27",
+                      "surface-container": "#e7eefe",
+                      "background": "#f9f9ff",
+                      "surface": "#f9f9ff",
+                      "on-primary-fixed-variant": "#474747",
+                      "on-primary-fixed": "#1b1b1b",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "on-tertiary-container": "#828486",
+                      "surface-container-highest": "#dce2f3",
+                      "outline": "#7e7576",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "on-tertiary-fixed-variant": "#444749",
+                      "on-secondary-container": "#616363",
+                      "error-container": "#ffdad6",
+                      "inverse-primary": "#c6c6c6",
+                      "on-secondary-fixed-variant": "#454747",
+                      "secondary": "#5d5f5f",
+                      "surface-dim": "#d3daea",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "tertiary-fixed-dim": "#c5c6c8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "0.5rem",
+                      "stack-md": "1rem",
+                      "container-max": "1280px",
+                      "gutter": "1.5rem",
+                      "margin-mobile": "1rem",
+                      "margin-desktop": "2.5rem",
+                      "stack-lg": "2rem"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "label-bold": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "display-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    }catch(_e){}</script><meta charset="utf-8"></head><body class="bg-background text-on-surface font-body-md text-body-md overflow-hidden h-screen flex flex-col">
+<!-- Top Navigation (Mobile Only) -->
+<header class="md:hidden bg-surface-container-lowest border-b-2 border-primary flex justify-between items-center w-full px-margin-mobile py-4 sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIibM3eLZk04du1Xmv3p8WTu2QxXhI0CIQwcMXjIJ6V-3xMLDj6JIJiwKbKliMQQ6H0e1-QGSKrXeOA9NL2_BIo17mOSPAF8OV9L5WxdAYE1p7ApQtkxKoKDstYOMQmIIicr9Yk8pYrJCcAugUYnFKg2ioQqz9TCpRRgcBSPamIDMV-1mLkN-ba_7p5U_zNGBB2HRbiYjDtB2Gd1hB9gpFKDV1mfLbPjjchniaIPNhhaKh_LQ7RV1lfQMKSZL2ANphVKlubJpYB7g" alt="PGPW Logo" class="w-8 h-8 rounded-md object-contain">
+<span class="font-display-lg text-headline-md font-extrabold text-primary">PeaceGangPeaceWorld</span>
+</div>
+<button class="text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<!-- Main Layout -->
+<div class="flex flex-1 overflow-hidden">
+<!-- SideNavBar (Desktop) -->
+<aside class="hidden md:flex flex-col bg-surface-container-low h-screen w-64 docked left-0 border-r border-outline-variant py-stack-md flex-shrink-0 z-40">
+<!-- Header/Profile -->
+<div class="px-6 pb-6 border-b border-outline-variant mb-4 flex flex-col items-center">
+<img alt="PGPW Logo" class="w-12 h-12 rounded-md object-contain mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIibM3eLZk04du1Xmv3p8WTu2QxXhI0CIQwcMXjIJ6V-3xMLDj6JIJiwKbKliMQQ6H0e1-QGSKrXeOA9NL2_BIo17mOSPAF8OV9L5WxdAYE1p7ApQtkxKoKDstYOMQmIIicr9Yk8pYrJCcAugUYnFKg2ioQqz9TCpRRgcBSPamIDMV-1mLkN-ba_7p5U_zNGBB2HRbiYjDtB2Gd1hB9gpFKDV1mfLbPjjchniaIPNhhaKh_LQ7RV1lfQMKSZL2ANphVKlubJpYB7g">
+<div class="relative w-20 h-20 rounded-full border-2 border-primary overflow-hidden mb-3">
+<img alt="User profile picture" class="w-full h-full object-cover" data-alt="A striking portrait of a young urban community leader looking determined, set against a bright, minimalist background. The lighting is high-key, creating a crisp, professional black-and-white aesthetic with subtle tonal grays. The mood is confident and peaceful." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr0Xueg7E5mzCOxcorN9K1UJ0T6gskVOZGZGbKfQ85GR4-hgoowem9IP7QTzcHxd43daVJUSp3T9M_cyug9avf6s_FaBB8J0bzdH6L7RGl2ncWkzvFO6D5ZZXsGI_tPz0cE_r2S7SRL9oK0SEZxLubMaNdR2SEgOJMX6iRqFEsorXaNjiaa7Iy9ggSom9koxXy2EYPyhwo2iaRvzqszdp6f6_QHIE0MKooSsoqEkTx9TliSDrfxsMatdd9qfQXBwPfOcE_8RPPXWE">
+</div>
+<h2 class="text-headline-md font-headline-md text-primary text-center">User Summary</h2>
+<p class="font-label-bold text-label-bold text-on-surface-variant mt-1">Peace Builder</p>
+</div>
+<!-- Navigation Links -->
+<nav class="flex flex-col gap-stack-sm overflow-y-auto px-2 flex-1 pb-24">
+<a class="bg-primary text-on-primary rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">rss_feed</span>
+                    News Feed
+                </a>
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold hover:bg-secondary-fixed-dim transition-transform duration-150 scale-95" href="#">
+<span class="material-symbols-outlined">person</span>
+                    Profile
+                </a>
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold hover:bg-secondary-fixed-dim transition-transform duration-150 scale-95" href="#">
+<span class="material-symbols-outlined">group</span>
+                    Friends
+                </a>
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold hover:bg-secondary-fixed-dim transition-transform duration-150 scale-95" href="#">
+<span class="material-symbols-outlined">chat</span>
+                    Messages
+                </a>
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold hover:bg-secondary-fixed-dim transition-transform duration-150 scale-95" href="../pgpw_forum_categories/code.html">
+<span class="material-symbols-outlined">forum</span>
+                    Forums
+                </a>
+
+
+
+
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold hover:bg-secondary-fixed-dim transition-transform duration-150 scale-95 mt-auto" href="../pgpw_admin_dashboard/code.html">
+<span class="material-symbols-outlined">settings</span>
+                    Settings
+                </a>
+</nav>
+</aside>
+<!-- -->
+<main class="flex-1 overflow-y-auto bg-surface relative pb-32">
+<!-- Top App Bar Desktop (Search & Quick Actions) -->
+<div class="hidden md:flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto bg-surface-container-lowest border-b-2 border-primary sticky top-0 z-30">
+<div class="flex-1 max-w-xl">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline-variant focus:border-primary focus:border-2 rounded-DEFAULT outline-none transition-all font-body-md text-body-md" placeholder="Search the community..." type="text">
+</div>
+</div>
+<div class="flex items-center gap-4 ml-6">
+<button class="text-primary hover:bg-secondary-fixed p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">mail</span>
+</button>
+<button class="text-primary hover:bg-secondary-fixed p-2 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span>
+</button>
+
+
+</div>
+</div>
+<div class="max-w-3xl mx-auto px-margin-mobile md:px-gutter py-stack-lg">
+<!-- Composer -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 mb-stack-lg shadow-sm">
+<div class="flex gap-4">
+<img alt="Current user" class="w-10 h-10 rounded-full border border-outline-variant object-cover" data-alt="A confident community leader portrait, black and white aesthetic, high contrast, clean white background, professional yet approachable vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsfsKQrMlHB4ypThSAuFNKya1eU84qBVsWRR2lFv0dAyxDioRr3OGVud5reKu7-bRvVS3FWkJWyE7aVxVKOTWm2MhbGtHrQSoeX5IvG6Fif3Sa_Xz-m6XxElFYV44rdec-4ZVoiuXt1YOa0dXLUm7OZvVziK7rZVrlSxCDNArRIsh0riv7F-hrfjQO0chhSpGF7ZWf6Cu8pZSuZiKWhKobGnkaQZpdWgt6Rnm_U59TxUdq9z4befo6GPIoE2ufcMfnnzmXseMI3rA">
+<div class="flex-1">
+<textarea class="w-full bg-transparent border-none outline-none resize-none font-body-md text-body-md placeholder-on-surface-variant min-h-[60px]" placeholder="Share a peace-building thought, track, or event..."></textarea>
+</div>
+</div>
+<div class="flex justify-between items-center mt-4 pt-4 border-t border-outline-variant">
+<div class="flex gap-2 text-on-surface-variant">
+<button class="p-2 hover:bg-surface-variant rounded-full transition-colors flex items-center justify-center" title="Add Media">
+<span class="material-symbols-outlined">image</span>
+</button>
+<button class="p-2 hover:bg-surface-variant rounded-full transition-colors flex items-center justify-center" title="Add Track">
+<span class="material-symbols-outlined">music_note</span>
+</button>
+<button class="p-2 hover:bg-surface-variant rounded-full transition-colors flex items-center justify-center" title="Create Event">
+<span class="material-symbols-outlined">event</span>
+</button>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-bold text-label-bold hover:opacity-90 transition-opacity shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)]">
+                            Post
+                        </button>
+</div>
+</div>
+<!-- Feed Items -->
+<div class="flex flex-col gap-stack-md">
+<!-- Post 1: Conflict Resolution Topic (Halftone featured) -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden hover:bg-surface-bright transition-colors duration-200">
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-3 items-center">
+<img alt="Author avatar" class="w-10 h-10 rounded-full border border-outline-variant object-cover" data-alt="A portrait of an urban youth mediator, monochromatic scheme, sharp focus, clean bright lighting, conveying trust and leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuihFgUPC27goi_rcGTclIv7_GN9YnU2sEYN4ywIXcbU7SEnYkkLsrstWTHWvCxHIJRKiC5fgndexJnMnH8M9dhZFqTAx2rIqjS5U-hNdxdwBuFwp458H2r4tjvsYzzHDzDb6hg3okpsVMbQwfxdOMe2p5L9_sPdrdF7vrB-ThjWrorwfRgPLFXi-RFVfk2vOivUc5qi2jvGFTpaE2iS2rO3llCp-IZuGxSEQRlXTDbpj59i_AI_lnXVcl8tN86e65EV6gQ2M7Zds">
+<div>
+<h3 class="font-label-bold text-label-bold text-primary">Alias: MediatorMike</h3>
+<p class="font-caption text-caption text-on-surface-variant">2 hours ago • Conflict Resolution</p>
+</div>
+</div>
+<div class="bg-tertiary-fixed text-primary px-3 py-1 rounded-full font-caption text-caption border border-outline-variant">
+                                    Topic Focus
+                                </div>
+</div>
+<div class="halftone-bg -mx-6 px-6 py-4 mb-4 border-y border-outline-variant">
+<h4 class="font-headline-lg text-primary mb-2">De-escalation Tactics Workshop Notes</h4>
+<p class="font-body-lg text-body-lg text-on-surface">Just wrapped up the weekend workshop. The key takeaway was active listening before reacting. We practiced the 'Pause &amp; Reflect' technique which proved highly effective in simulated heated scenarios. Let's keep the dialogue open.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex gap-1">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary px-3 py-1.5 rounded-md hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-bold text-label-bold">124</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary px-3 py-1.5 rounded-md hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="font-label-bold text-label-bold">45</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary px-3 py-1.5 rounded-md hover:bg-surface-variant transition-colors">
+
+</button>
+</div>
+<div class="flex gap-2">
+<button class="text-on-surface-variant hover:text-primary p-2 rounded-full hover:bg-surface-variant transition-colors" title="Save">
+
+</button>
+<button class="text-error hover:bg-error-container p-2 rounded-full transition-colors flex items-center justify-center" title="Report">
+<span class="material-symbols-outlined">flag</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Post 2: Music Upload -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden hover:bg-surface-bright transition-colors duration-200">
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-3 items-center">
+<img alt="Author avatar" class="w-10 h-10 rounded-full border border-outline-variant object-cover" data-alt="A sharp profile picture of a street poet and producer, wearing a dark hoodie, set against a stark white backdrop, high contrast brutalist lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGbX2E6DvIBIy6_QRdkGIFuxYev1YbK4vT4re7oEQ_A8Y9vzxL6cMzk-w_CL5vpXUQipOFW-CAGflfvSEJuedEFsIdxh-ZoiHKhYwJa0eMixBfoFH8GK0_bpUVuO-cJWGGIOnsPnbw_V1w8ckBPegkz-6KwTemBtyJV9jcHDJT2ebApHjl2PqTpm5YS86FYPEUUuu77gFjclIOPQk_PvzrWNyvzAVaSz6oFyCGJlG44uSYCgU4_By942yUdK-qPihPQi3z0aFp_Xg">
+<div>
+<h3 class="font-label-bold text-label-bold text-primary">Alias: BeatBridge</h3>
+<p class="font-caption text-caption text-on-surface-variant">5 hours ago • Music Upload</p>
+</div>
+</div>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface mb-4">New instrumental track aimed at bringing down the anxiety levels. Pure atmospheric vibes. Let me know what verses you'd put over this.</p>
+
+<div class="flex items-center justify-between mt-4 border-t border-outline-variant pt-4">
+<div class="flex gap-1">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary px-3 py-1.5 rounded-md hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-label-bold text-label-bold">89</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary px-3 py-1.5 rounded-md hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="font-label-bold text-label-bold">12</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary px-3 py-1.5 rounded-md hover:bg-surface-variant transition-colors">
+
+</button>
+</div>
+<div class="flex gap-2">
+<button class="text-on-surface-variant hover:text-primary p-2 rounded-full hover:bg-surface-variant transition-colors" title="Save">
+
+</button>
+<button class="text-error hover:bg-error-container p-2 rounded-full transition-colors flex items-center justify-center" title="Report">
+<span class="material-symbols-outlined">flag</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</main>
+<!-- Right Sidebar (Live Chat, Resources) -->
+<aside class="hidden lg:flex flex-col w-80 bg-surface-container-low border-l border-outline-variant p-6 overflow-y-auto flex-shrink-0 z-20 pb-32">
+<!-- Trending Discussions -->
+<section class="mb-stack-lg">
+<h3 class="font-headline-md text-headline-md text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined">trending_up</span>
+                    Trending Peace Talks
+                </h3>
+<ul class="flex flex-col gap-3">
+<li class="bg-surface-container-lowest p-3 rounded-lg border border-outline-variant hover:border-primary transition-colors cursor-pointer">
+<span class="font-caption text-caption text-on-surface-variant block mb-1">#CommunityDialogue</span>
+<h4 class="font-label-bold text-label-bold text-primary">Healing After Weekend Tension</h4>
+<span class="font-caption text-caption text-on-surface-variant mt-2 block">1.2k participants</span>
+</li>
+<li class="bg-surface-container-lowest p-3 rounded-lg border border-outline-variant hover:border-primary transition-colors cursor-pointer">
+<span class="font-caption text-caption text-on-surface-variant block mb-1">#MusicForChange</span>
+<h4 class="font-label-bold text-label-bold text-primary">Collab: Westside &amp; Eastside Producers</h4>
+<span class="font-caption text-caption text-on-surface-variant mt-2 block">850 participants</span>
+</li>
+</ul>
+</section>
+<!-- Live Chat Panel Preview -->
+<section class="mb-stack-lg flex-1 flex flex-col">
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-headline-md text-headline-md text-primary flex items-center gap-2">
+<span class="material-symbols-outlined">chat</span>
+                        Live Hub
+                    </h3>
+<span class="flex items-center gap-1 font-caption text-caption text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary block"></span> 42 Online
+                    </span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-3 flex-1 overflow-y-auto flex flex-col gap-3 h-64">
+<div class="flex gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-container flex-shrink-0 mt-1"></div>
+<div>
+<span class="font-label-bold text-label-bold text-primary text-sm">Alias_One</span>
+<p class="font-body-md text-sm text-on-surface">Meeting at the community center at 5pm.</p>
+</div>
+</div>
+<div class="flex gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-container flex-shrink-0 mt-1"></div>
+<div>
+<span class="font-label-bold text-label-bold text-primary text-sm">PeaceKeeper22</span>
+<p class="font-body-md text-sm text-on-surface">I'll bring the flyers for the weekend event.</p>
+</div>
+</div>
+</div>
+<div class="mt-2 relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-full py-2 pl-4 pr-10 font-body-md text-sm focus:border-primary outline-none" placeholder="Send a message..." type="text">
+<button class="absolute right-2 top-1/2 -translate-y-1/2 text-primary p-1">
+<span class="material-symbols-outlined text-lg">send</span>
+</button>
+</div>
+</section>
+<!-- Safety Resources (Fixed at bottom of sidebar contextually) -->
+<section class="mt-auto bg-surface-container-highest p-4 rounded-lg border-2 border-primary">
+<h3 class="font-headline-md text-headline-md text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-error">health_and_safety</span>
+                    Crisis Resources
+                </h3>
+<p class="font-caption text-caption text-on-surface-variant mb-3">Immediate help and neutral mediator contacts.</p>
+<button onclick="window.location.href='../pgpw_safety_reporting/code.html'" class="w-full bg-primary text-on-primary py-2 rounded-md font-label-bold text-label-bold hover:bg-secondary-fixed hover:text-primary transition-colors border-2 border-primary">
+                    Access Help Center
+                </button>
+</section>
+</aside>
+</div>
+</body></html>

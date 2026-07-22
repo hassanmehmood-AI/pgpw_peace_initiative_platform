@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PGPW Admin Dashboard - Mobile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e1e2e4",
+                    "outline-variant": "#cfc4c5",
+                    "secondary-container": "#dfe0e0",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-background": "#151c27",
+                    "primary": "#000000",
+                    "on-tertiary-container": "#828486",
+                    "inverse-surface": "#2a313d",
+                    "outline": "#7e7576",
+                    "surface-container": "#e7eefe",
+                    "surface-bright": "#f9f9ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e2e8f8",
+                    "on-primary-fixed": "#1b1b1b",
+                    "secondary": "#5d5f5f",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "on-surface-variant": "#4c4546",
+                    "background": "#f9f9ff",
+                    "tertiary": "#000000",
+                    "surface-container-low": "#f0f3ff",
+                    "on-surface": "#151c27",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#5e5e5e",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "tertiary-container": "#191c1e",
+                    "on-primary-container": "#848484",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#dce2f3",
+                    "tertiary-fixed-dim": "#c5c6c8",
+                    "surface": "#f9f9ff",
+                    "on-secondary-container": "#616363",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#474747",
+                    "on-secondary-fixed-variant": "#454747",
+                    "surface-dim": "#d3daea",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#c6c6c6",
+                    "on-tertiary-fixed": "#191c1e",
+                    "primary-fixed": "#e2e2e2",
+                    "surface-variant": "#dce2f3",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "primary-container": "#1b1b1b",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "inverse-on-surface": "#ebf1ff",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "2rem",
+                    "gutter": "1.5rem",
+                    "stack-md": "1rem",
+                    "margin-mobile": "1rem",
+                    "margin-desktop": "2.5rem",
+                    "stack-sm": "0.5rem",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "caption": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["20px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .halftone-bg {
+            background-image: radial-gradient(circle, #000 1px, transparent 1px);
+            background-size: 8px 8px;
+            opacity: 0.05;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #000;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col">
+<!-- Top Navigation Anchor -->
+<header class="bg-surface-container-lowest sticky top-0 z-50 border-b-2 border-primary">
+<div class="flex justify-between items-center w-full px-4 py-4 max-w-container-max mx-auto">
+<h1 class="font-display-lg text-headline-md font-extrabold text-primary">PeaceGangPeaceWorld</h1>
+<div class="flex gap-4 items-center">
+<span class="material-symbols-outlined text-primary" data-icon="notifications">notifications</span>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-sm" data-icon="person">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow p-margin-mobile flex flex-col gap-stack-lg">
+<!-- Welcome Header -->
+<section>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Admin Dashboard</h2>
+<p class="font-body-md text-on-surface-variant">Neutrality Monitoring &amp; Community Oversight</p>
+</section>
+<!-- High-Level Stats (Bento Grid Style) -->
+<section class="grid grid-cols-2 gap-4">
+<!-- Total Members -->
+<div class="bg-surface-container-lowest border border-outline-variant p-4 rounded-lg relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2 halftone-bg w-12 h-12"></div>
+<p class="font-label-bold text-label-bold text-on-surface-variant mb-1">Total Members</p>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">12.4k</h3>
+<div class="mt-2 flex items-center text-green-600 gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+<span class="text-xs font-bold">+12%</span>
+</div>
+</div>
+<!-- Active Members -->
+<div class="bg-surface-container-lowest border border-outline-variant p-4 rounded-lg">
+<p class="font-label-bold text-label-bold text-on-surface-variant mb-1">Active Now</p>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">1,892</h3>
+<div class="mt-2 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+<span class="text-xs font-medium">Live Presence</span>
+</div>
+</div>
+<!-- Reported Content -->
+<div class="bg-surface-container-lowest border-2 border-error p-4 rounded-lg">
+<p class="font-label-bold text-label-bold text-error mb-1">Reported</p>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-error">42</h3>
+<p class="text-xs text-on-surface-variant mt-2 font-medium">Pending Review</p>
+</div>
+<!-- Suspended -->
+<div class="bg-surface-container-lowest border border-outline-variant p-4 rounded-lg">
+<p class="font-label-bold text-label-bold text-on-surface-variant mb-1">Suspended</p>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">156</h3>
+<div class="mt-2 flex items-center text-on-surface-variant gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="block">block</span>
+<span class="text-xs font-medium">Lifetime</span>
+</div>
+</div>
+</section>
+<!-- Reported Content Feed -->
+<section class="flex flex-col gap-stack-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-primary">Neutrality Alerts</h2>
+<button onclick="window.location.href='../pgpw_safety_reporting_mobile/code.html'" class="font-label-bold text-label-bold text-primary flex items-center gap-1">
+                    View All <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Report Item 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-4 rounded-lg hover:border-primary transition-colors duration-200">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border border-outline-variant bg-surface-container">
+<img class="w-full h-full rounded-full object-cover" data-alt="A portrait of a young urban community leader in a monochromatic high-contrast setting, emphasizing professional neutrality and authority. The lighting is crisp and modern with a white background, mirroring the Radical Neutrality design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1ELUX88Dx5oggs7geFk7m5hdjPTYzcsNRATsNFjrZm7wIhfWvEcoQciCTgUKnzgd0YW-WoalinsPkIMLM9J057oSSsZ9B66VHhpH9nIv0dTyE-uhj7MfxBNbWwsooJkX6_6AxOIZqfAsaqLYgvkqG9yhVoVl0DJeZ5m7KMn6rsTqsBuWKWtHGdA-uF6aWYKjyILqOeV8WUNAbmsx_1lLWaj66MmvRVoqdAG-iQ_1i9yTdgwS_tPxJSJf9n1hUqaydsUENXBrikC8"/>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-primary">Marcus_V</p>
+<p class="text-caption text-on-surface-variant">Reported 12m ago</p>
+</div>
+</div>
+<div class="px-2 py-1 rounded-full bg-error-container text-on-error-container text-[10px] font-bold uppercase tracking-wider">
+                            High Priority
+                        </div>
+</div>
+<div class="bg-surface-container-low p-3 rounded mb-3 border-l-4 border-error">
+<p class="font-body-md text-on-surface italic text-sm">"This side of the bridge doesn't belong to you. Stay on your own turf before things get loud."</p>
+</div>
+<div class="flex gap-2 mb-4">
+<div class="bg-blue-100 border-2 border-blue-600 text-blue-600 px-3 py-1 rounded-full text-xs font-bold">Crip Blue</div>
+<div class="bg-gray-100 border-2 border-gray-400 text-gray-500 px-3 py-1 rounded-full text-xs font-bold italic">Violated Neutrality</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 py-2 bg-primary text-on-primary font-label-bold text-sm rounded-lg active:scale-95 transition-transform">Dismiss</button>
+<button class="flex-1 py-2 border-2 border-primary text-primary font-label-bold text-sm rounded-lg active:scale-95 transition-transform">Suspend</button>
+<button class="w-12 py-2 border-2 border-outline text-on-surface-variant rounded-lg flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Report Item 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-4 rounded-lg hover:border-primary transition-colors duration-200">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border border-outline-variant bg-surface-container">
+<img class="w-full h-full rounded-full object-cover" data-alt="A portrait of a middle-aged woman mediator in a professional, minimalist attire. She is set against a clean white gallery wall with subtle halftone textures in the shadows, embodying the urban and professional PeaceGangPeaceWorld aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSOpY29ELQ-QI7yfSsKI-3FvB0nSoc5ZkIrHJo1kgc98bIaHY7LvpY-065PZNnREJhDY_HSQM1GouAoeg46uuxA2cqB6X1OSEQ07-SUQteyY4ghQTkZl2LScbTmR5FDtPAOaKbkgLMDWLf7meCz2R4kUfozvMYDjFUMLbzotw5rk6Dp81flUAeQbCERSpc9p7Kuej5nOuVwIHMLJtVm8Fx7s2YQH4nQvwS05VxnL9dKs0VJZaZI1p6tQCL_NByMCH5rZrigGKYcQQ"/>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-primary">Lila_Mediate</p>
+<p class="text-caption text-on-surface-variant">Reported 45m ago</p>
+</div>
+</div>
+<div class="px-2 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-wider">
+                            Medium
+                        </div>
+</div>
+<div class="bg-surface-container-low p-3 rounded mb-3 border-l-4 border-primary">
+<p class="font-body-md text-on-surface italic text-sm">"Suspicious activity noted near the community center at 21:00. No direct threats, but tension is rising."</p>
+</div>
+<div class="flex gap-2 mb-4">
+<div class="bg-red-100 border-2 border-red-600 text-red-600 px-3 py-1 rounded-full text-xs font-bold">Blood Red</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 py-2 bg-primary text-on-primary font-label-bold text-sm rounded-lg active:scale-95 transition-transform">Escalate</button>
+<button class="flex-1 py-2 border-2 border-primary text-primary font-label-bold text-sm rounded-lg active:scale-95 transition-transform">Resolve</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions Floating UI (Contextual for Mobile) -->
+<section class="grid grid-cols-2 gap-4 pb-stack-lg">
+<button class="bg-primary text-on-primary p-4 rounded-lg flex flex-col gap-2 items-center text-center shadow-lg">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+<span class="font-label-bold text-sm uppercase tracking-tighter">Issue Warning</span>
+</button>
+<button onclick="window.location.href='../pgpw_safety_reporting_mobile/code.html'" class="bg-surface-container-lowest border-2 border-primary text-primary p-4 rounded-lg flex flex-col gap-2 items-center text-center">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+<span class="font-label-bold text-sm uppercase tracking-tighter">Safety Mode</span>
+</button>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Mobile Anchor) -->
+<nav class="bg-surface-container-low flex justify-around items-center w-full py-4 border-t border-outline-variant sticky bottom-0 z-50">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-bold text-[10px] uppercase">Dash</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="../pgpw_forum_categories_mobile/code.html">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="font-label-bold text-[10px] uppercase">Forums</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-bold text-[10px] uppercase">Members</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant relative" href="../pgpw_news_feed_mobile/code.html">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="font-label-bold text-[10px] uppercase">Chat</span>
+<span class="absolute -top-1 -right-1 w-4 h-4 bg-error text-on-error text-[10px] rounded-full flex items-center justify-center font-bold">5</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-bold text-[10px] uppercase">Admin</span>
+</a>
+</nav>
+<!-- Interactive Script for micro-interactions -->
+<script>
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.classList.add('scale-95');
+            });
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('scale-95');
+            });
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('scale-95');
+            });
+        });
+
+        // Simple haptic feedback simulation
+        function triggerHaptic() {
+            if (window.navigator.vibrate) {
+                window.navigator.vibrate(10);
+            }
+        }
+
+        document.querySelectorAll('nav a').forEach(navLink => {
+            navLink.addEventListener('click', () => triggerHaptic());
+        });
+    </script>
+</body></html>

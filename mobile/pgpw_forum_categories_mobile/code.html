@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PGPW Forum Categories - PeaceGangPeaceWorld</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e1e2e4",
+                    "outline-variant": "#cfc4c5",
+                    "secondary-container": "#dfe0e0",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-background": "#151c27",
+                    "primary": "#000000",
+                    "on-tertiary-container": "#828486",
+                    "inverse-surface": "#2a313d",
+                    "outline": "#7e7576",
+                    "surface-container": "#e7eefe",
+                    "surface-bright": "#f9f9ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e2e8f8",
+                    "on-primary-fixed": "#1b1b1b",
+                    "secondary": "#5d5f5f",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "on-surface-variant": "#4c4546",
+                    "background": "#f9f9ff",
+                    "tertiary": "#000000",
+                    "surface-container-low": "#f0f3ff",
+                    "on-surface": "#151c27",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#5e5e5e",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "tertiary-container": "#191c1e",
+                    "on-primary-container": "#848484",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#dce2f3",
+                    "tertiary-fixed-dim": "#c5c6c8",
+                    "surface": "#f9f9ff",
+                    "on-secondary-container": "#616363",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#474747",
+                    "on-secondary-fixed-variant": "#454747",
+                    "surface-dim": "#d3daea",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#c6c6c6",
+                    "on-tertiary-fixed": "#191c1e",
+                    "primary-fixed": "#e2e2e2",
+                    "surface-variant": "#dce2f3",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "primary-container": "#1b1b1b",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "inverse-on-surface": "#ebf1ff",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "2rem",
+                    "gutter": "1.5rem",
+                    "stack-md": "1rem",
+                    "margin-mobile": "1rem",
+                    "margin-desktop": "2.5rem",
+                    "stack-sm": "0.5rem",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "caption": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["20px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #f9f9ff; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .halftone-bg {
+            background-image: radial-gradient(#000 10%, transparent 11%);
+            background-size: 8px 8px;
+            opacity: 0.05;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #000;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar (Large/Mobile Optimized) -->
+<header class="bg-surface-container-lowest dark:bg-primary-container border-b-2 border-primary dark:border-outline docked full-width top-0 sticky z-50 transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center w-full px-margin-mobile py-4 max-w-container-max mx-auto">
+<h1 class="font-display-lg text-headline-md font-extrabold text-primary dark:text-on-primary">PeaceGangPeaceWorld</h1>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary" data-icon="search">search</button>
+<button class="material-symbols-outlined text-primary" data-icon="menu" onclick="toggleSideNav()">menu</button>
+</div>
+</div>
+</header>
+<main class="flex flex-col min-h-screen">
+<!-- Forum Header & Search -->
+<section class="px-margin-mobile pt-stack-md flex flex-col gap-stack-md">
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Forum Categories</h2>
+<p class="font-body-md text-on-surface-variant opacity-70">Join the dialogue for global harmony.</p>
+</div>
+<!-- Search Bar Component -->
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-low border border-outline-variant rounded-lg font-body-md focus:border-2 focus:border-primary focus:ring-0 transition-all" placeholder="Search discussions, topics, or members..." type="text"/>
+</div>
+</section>
+<!-- Vertical Category Cards -->
+<section class="px-margin-mobile py-stack-lg flex flex-col gap-stack-md">
+<!-- Category Card: Peace and Unity -->
+<div class="bg-white border border-outline-variant rounded-xl overflow-hidden group hover:border-primary transition-all">
+<div class="h-24 relative overflow-hidden bg-primary flex items-center px-6">
+<div class="absolute inset-0 halftone-bg"></div>
+<h3 class="font-headline-md text-white z-10">Peace and Unity</h3>
+<span class="material-symbols-outlined text-white/20 text-6xl absolute -right-4 -bottom-4 rotate-12" data-icon="handshake">handshake</span>
+</div>
+<div class="p-4 flex flex-col gap-stack-md">
+<p class="font-body-md text-on-surface-variant">Foundational discussions on fostering collective belonging and shared human values across borders.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary/5 border-2 border-primary/20 rounded-full text-primary font-label-bold text-caption">Active Dialogue</span>
+<span class="px-3 py-1 bg-secondary/5 border-2 border-secondary/20 rounded-full text-secondary font-label-bold text-caption">Non-Violence</span>
+</div>
+<div class="border-t border-outline-variant pt-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a diverse male moderator with a calm expression, wearing a neutral gray polo shirt against a minimalist white studio background. Sharp focus, professional lighting, urban minimalism style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA00C5M0PnVOXkFijFla3uM1oibx2vUyyMAUUru5OzJlkdsX5ypQWPoI8J656uOKefwKBmlFzMByfudoIAI6-OunP_Webgkyl6zJG9kKjdqi7Wgb71u9Z176iqKZhnXq3E_VjBTFHk8NBSbAyLWzb8xVwVDUxKJBwWge1wISDM6N0hfNnHEmXu9hqAFSrqT9Xar1-ZsYt5DegKpbrF46qITsDu6QlZKIDIvLcPVZJm5I6ED5whrN-EGY2twhHsTNwDSrElMySpn6no"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-bold text-caption text-primary">Mod: Marcus_A</span>
+<span class="text-[10px] uppercase tracking-wider text-outline">Senior Mediator</span>
+</div>
+</div>
+<div class="flex gap-4 text-outline">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="forum">forum</span>
+<span class="font-label-bold text-caption">1.2k</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+<span class="font-label-bold text-caption">8.4k</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Category Card: General Discussion -->
+<div class="bg-white border border-outline-variant rounded-xl overflow-hidden group hover:border-primary transition-all">
+<div class="h-24 relative overflow-hidden bg-secondary flex items-center px-6">
+<div class="absolute inset-0 halftone-bg"></div>
+<h3 class="font-headline-md text-white z-10">General Discussion</h3>
+<span class="material-symbols-outlined text-white/20 text-6xl absolute -right-4 -bottom-4 rotate-12" data-icon="chat">chat</span>
+</div>
+<div class="p-4 flex flex-col gap-stack-md">
+<p class="font-body-md text-on-surface-variant">A neutral space for community updates, member introductions, and casual conversation about global culture.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-secondary/5 border-2 border-secondary/20 rounded-full text-secondary font-label-bold text-caption">Community</span>
+<span class="px-3 py-1 bg-secondary/5 border-2 border-secondary/20 rounded-full text-secondary font-label-bold text-caption">Culture</span>
+</div>
+<div class="border-t border-outline-variant pt-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a young female moderator with bright, intelligent eyes, wearing a black turtleneck. The background is a clean, modern white room with soft, diffused sunlight. High-contrast, minimalist urban aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX_1ug1OYsokdfx32MYB9InbzhclwKgxefcsG6NKfchxGX4RyhRFJq6k7txb2Xa-Ltz28ssZuqXXNNgcC_j-RDjumvsPvjvMMSVxBWONxyTXFzpUH69Z74uMZQDMPudZS-VBLQcjKKP7k8TxaxkBkmHhHg1pdqorSJFGX0_-hEpi2vK_TOKK0W-JBrP3_W0uUbqU8NZ5COTuSDtrFF8ZL1k9prfCJUA54itilZG7iaPVHHsOyy26LHE8cnIL6gfieQnrOXgjMsy_4"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-bold text-caption text-primary">Mod: Sarah_V</span>
+<span class="text-[10px] uppercase tracking-wider text-outline">Community Lead</span>
+</div>
+</div>
+<div class="flex gap-4 text-outline">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="forum">forum</span>
+<span class="font-label-bold text-caption">3.5k</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+<span class="font-label-bold text-caption">12.1k</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Category Card: Conflict Resolution -->
+<div class="bg-white border border-outline-variant rounded-xl overflow-hidden group hover:border-primary transition-all">
+<div class="h-24 relative overflow-hidden bg-primary-container flex items-center px-6">
+<div class="absolute inset-0 halftone-bg"></div>
+<h3 class="font-headline-md text-white z-10">Conflict Resolution</h3>
+<span class="material-symbols-outlined text-white/20 text-6xl absolute -right-4 -bottom-4 rotate-12" data-icon="balance">balance</span>
+</div>
+<div class="p-4 flex flex-col gap-stack-md">
+<p class="font-body-md text-on-surface-variant">Strategic frameworks and real-world case studies for de-escalating tensions and building lasting agreements.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary/5 border-2 border-primary/20 rounded-full text-primary font-label-bold text-caption">Strategic</span>
+<span class="px-3 py-1 bg-primary/5 border-2 border-primary/20 rounded-full text-primary font-label-bold text-caption">Frameworks</span>
+</div>
+<div class="border-t border-outline-variant pt-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A portrait of a seasoned male diplomat with salt-and-pepper hair, wearing a sharp black suit against a monochromatic architectural background. Professional, authoritative, and peaceful lighting. Radical Neutrality design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXMpNHUG57fjop_lLFzBH5Ri4Nkz3GTCWifR5f-RDWeyMOJK2nGMjYC1Wk0o0O68541r1pQAwBP9YBCEaUVu-wKYcqJUvS64v5aKPTE36lOM5CULn-9MRIdqDCArXptkh74vgj05KGbRcP-MJTk8TQjOEQHhYpV9z9AmWtExnwyBfvDseti2Q598xZR6QBt4u2LoN1bvsGT96jsgF5c0Rb6YogzziBwniUqVB0wKVzGJRPVl48unFYZxKsuUuizoa8zqXUMCsKr8o"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-bold text-caption text-primary">Mod: Dr_Chen</span>
+<span class="text-[10px] uppercase tracking-wider text-outline">Peace Strategist</span>
+</div>
+</div>
+<div class="flex gap-4 text-outline">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="forum">forum</span>
+<span class="font-label-bold text-caption">842</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+<span class="font-label-bold text-caption">5.6k</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Component -->
+<footer class="w-full py-stack-lg px-margin-mobile flex flex-col items-center gap-stack-md bg-primary text-on-primary border-t-4 border-primary mt-auto">
+<h4 class="font-headline-md text-headline-md text-on-primary">PeaceGangPeaceWorld</h4>
+<div class="flex flex-wrap justify-center gap-4 text-caption font-caption">
+<a class="opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-opacity" href="#">Quick Links</a>
+<a class="opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-opacity" href="../pgpw_safety_reporting_mobile/code.html">Crisis Resources</a>
+<a class="opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-opacity" href="#">Legal</a>
+<a class="opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-opacity" href="../pgpw_safety_reporting_mobile/code.html">Safety Policy</a>
+</div>
+<p class="text-center opacity-60 text-[10px] px-4">
+                © 2024 PeaceGangPeaceWorld. All Rights Reserved. Peace-building disclaimer: This platform is dedicated to non-violence and mediator neutrality.
+            </p>
+</footer>
+</main>
+<!-- SideNavBar (Mobile Overlay Drawer) -->
+<div class="fixed inset-0 z-[100] transform -translate-x-full transition-transform duration-300" id="side-nav">
+<div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="toggleSideNav()"></div>
+<aside class="relative w-64 h-full bg-surface-container-low dark:bg-surface-container-highest border-r border-outline-variant flex flex-col gap-stack-sm py-stack-md overflow-y-auto custom-scrollbar">
+<div class="px-6 mb-4 flex flex-col">
+<h3 class="text-headline-md font-headline-md text-primary">User Summary</h3>
+<p class="font-label-bold text-label-bold text-on-surface-variant opacity-70">Peace Builder</p>
+</div>
+<nav class="flex flex-col">
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold scale-95 transition-transform" href="../pgpw_news_feed_mobile/code.html">
+<span class="material-symbols-outlined" data-icon="rss_feed">rss_feed</span> News Feed
+                </a>
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span> Profile
+                </a>
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span> Friends
+                </a>
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span> Messages
+                </a>
+<a class="bg-primary text-on-primary rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span> Forums
+                </a>
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span> Saved Posts
+                </a>
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span> Peace Programs
+                </a>
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="event">event</span> Community Events
+                </a>
+<a class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold scale-95 transition-transform mt-auto" href="../pgpw_admin_dashboard_mobile/code.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span> Settings
+                </a>
+</nav>
+</aside>
+</div>
+<!-- Floating Action Button (FAB) -->
+<button onclick="window.location.href='../pgpw_news_feed_mobile/code.html'" class="fixed bottom-6 right-6 w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center z-40 hover:scale-110 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<script>
+        function toggleSideNav() {
+            const nav = document.getElementById('side-nav');
+            if (nav.classList.contains('-translate-x-full')) {
+                nav.classList.remove('-translate-x-full');
+            } else {
+                nav.classList.add('-translate-x-full');
+            }
+        }
+
+        // Search interaction
+        const searchInput = document.querySelector('input');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('scale-[1.02]');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('scale-[1.02]');
+        });
+    </script>
+</body></html>

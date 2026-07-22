@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PeaceGangPeaceWorld | Ending Violence Through Unity</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .halftone-overlay {
+            background-image: radial-gradient(#000 10%, transparent 11%);
+            background-size: 10px 10px;
+            opacity: 0.05;
+        }
+        .scroll-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scroll-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        @keyframes subtle-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        .animate-pulse-slow {
+            animation: subtle-pulse 4s infinite ease-in-out;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#e1e2e4",
+                      "outline-variant": "#cfc4c5",
+                      "secondary-container": "#dfe0e0",
+                      "secondary-fixed": "#e2e2e2",
+                      "on-background": "#151c27",
+                      "primary": "#000000",
+                      "on-tertiary-container": "#828486",
+                      "inverse-surface": "#2a313d",
+                      "outline": "#7e7576",
+                      "surface-container": "#e7eefe",
+                      "surface-bright": "#f9f9ff",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-high": "#e2e8f8",
+                      "on-primary-fixed": "#1b1b1b",
+                      "secondary": "#5d5f5f",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "on-surface-variant": "#4c4546",
+                      "background": "#f9f9ff",
+                      "tertiary": "#000000",
+                      "surface-container-low": "#f0f3ff",
+                      "on-surface": "#151c27",
+                      "error": "#ba1a1a",
+                      "surface-tint": "#5e5e5e",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "tertiary-container": "#191c1e",
+                      "on-primary-container": "#848484",
+                      "error-container": "#ffdad6",
+                      "surface-container-highest": "#dce2f3",
+                      "tertiary-fixed-dim": "#c5c6c8",
+                      "surface": "#f9f9ff",
+                      "on-secondary-container": "#616363",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#474747",
+                      "on-secondary-fixed-variant": "#454747",
+                      "surface-dim": "#d3daea",
+                      "on-error-container": "#93000a",
+                      "inverse-primary": "#c6c6c6",
+                      "on-tertiary-fixed": "#191c1e",
+                      "primary-fixed": "#e2e2e2",
+                      "surface-variant": "#dce2f3",
+                      "on-secondary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "primary-container": "#1b1b1b",
+                      "on-tertiary-fixed-variant": "#444749",
+                      "inverse-on-surface": "#ebf1ff",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "on-tertiary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "2rem",
+                      "gutter": "1.5rem",
+                      "stack-md": "1rem",
+                      "margin-mobile": "1rem",
+                      "margin-desktop": "2.5rem",
+                      "stack-sm": "0.5rem",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Montserrat"],
+                      "headline-lg": ["Montserrat"],
+                      "headline-md": ["Montserrat"],
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-bold": ["Inter"],
+                      "headline-lg-mobile": ["Montserrat"],
+                      "caption": ["Inter"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-md": ["20px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-bold": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-surface-container-lowest sticky top-0 z-50 border-b-2 border-primary">
+<div class="flex justify-between items-center w-full px-4 py-4 max-w-container-max mx-auto">
+<h1 class="font-display-lg text-headline-md font-extrabold text-primary">PeaceGangPeaceWorld</h1>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+<button onclick="window.location.href='../pgpw_registration_flow_mobile/code.html'" class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-bold text-sm">Sign Up</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex flex-col gap-stack-lg pb-24">
+<!-- Hero Section -->
+<section class="relative w-full px-4 pt-12 pb-8 overflow-hidden bg-white">
+<div class="absolute inset-0 halftone-overlay pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-4">
+<span class="inline-block px-3 py-1 bg-primary text-on-primary font-label-bold text-caption rounded-sm w-fit uppercase tracking-widest">Global Initiative</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Ending Violence Through Unity</h2>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                    PeaceGangPeaceWorld is a neutral ground for reconciliation. We bridge divides and foster non-violence through shared community action.
+                </p>
+<div class="flex gap-3 mt-4">
+<button onclick="window.location.href='../pgpw_registration_flow_mobile/code.html'" class="flex-1 bg-primary text-on-primary py-4 rounded-lg font-label-bold text-center">Join Movement</button>
+<button onclick="window.location.href='../pgpw_safety_reporting_mobile/code.html'" class="flex-1 bg-white border-2 border-primary text-primary py-4 rounded-lg font-label-bold text-center">Our Policy</button>
+</div>
+</div>
+<!-- Hero Decorative Image -->
+<div class="mt-8 rounded-xl overflow-hidden border border-outline-variant shadow-sm aspect-[4/3] relative">
+<img class="w-full h-full object-cover" data-alt="A powerful urban mural depicting diverse hands interlocking to form a circular emblem of peace. The art style is modern brutalist with high contrast black and white lines, set against a stark city brick wall. Subtle daylight filters through high-rise buildings in the background, creating a mood of hope and architectural strength. The aesthetic is clean, polished, and authoritative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIJrNm6WGCMOlSBOtlfwUFd3_lZCvcyuS5wNTHK3q43F0jVvwUrnW1OzRu0Cn20ZS3N_BmA1Kd6ulq8BV-XR8V_ZwM23w0GmBAlRW3WJWR5RlEHTDgpIE9MDTKZFMTuq_3ArtzQUhctaOAporwv8nZbvLGcekGuHHfmH-QNwj6KYxvJI6p-fbup4BYeaIEGbLIS6GQM4DQQqW5Kc0GW9qKzkKk1u-vBfWEH8jdht7KDlpzkw8pJp_M-rPabU69-ZqA1djtk7R34PI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-white">
+<p class="font-label-bold text-sm uppercase tracking-tighter">Neutrality. Reconciliation. Progress.</p>
+</div>
+</div>
+</section>
+<!-- Policy Disclaimer (Anti-Violence) -->
+<section class="px-4">
+<div class="bg-surface-container-low border border-outline-variant p-6 rounded-xl flex gap-4 items-start">
+<span class="material-symbols-outlined text-error text-3xl" data-icon="gavel">gavel</span>
+<div>
+<h3 class="font-label-bold text-primary mb-1">Zero Tolerance Policy</h3>
+<p class="font-caption text-on-surface-variant">
+                        PGPW maintains a strict non-violence mandate. Any promotion of gang-related conflict, illegal activities, or hate speech results in immediate and permanent exclusion from the platform.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Community Registration Cards (Vertical Stack) -->
+<section class="px-4 flex flex-col gap-stack-md">
+<div class="flex justify-between items-end mb-2">
+<h3 class="font-headline-md text-primary">Join a Circle</h3>
+<span class="text-caption font-label-bold text-primary border-b border-primary">View All</span>
+</div>
+<!-- Card 1 -->
+<div class="bg-white border border-outline-variant p-5 rounded-xl flex flex-col gap-4 active:scale-95 transition-transform">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+</div>
+<div class="px-3 py-1 bg-[#E7E9FF] border-2 border-[#1B3BB3] rounded-full">
+<span class="text-[#1B3BB3] font-label-bold text-[10px] uppercase">Mediator</span>
+</div>
+</div>
+<div>
+<h4 class="font-headline-md text-primary">Conflict Resolution</h4>
+<p class="font-body-md text-on-surface-variant mt-1">Professional training for neighborhood peace-builders.</p>
+</div>
+<button onclick="window.location.href='../pgpw_registration_flow_mobile/code.html'" class="w-full py-3 border-2 border-primary text-primary font-label-bold rounded-lg mt-2">Register Now</button>
+</div>
+<!-- Card 2 -->
+<div class="bg-white border border-outline-variant p-5 rounded-xl flex flex-col gap-4 active:scale-95 transition-transform">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="music_note">music_note</span>
+</div>
+<div class="px-3 py-1 bg-[#FDE7FF] border-2 border-[#A31BB3] rounded-full">
+<span class="text-[#A31BB3] font-label-bold text-[10px] uppercase">Creative</span>
+</div>
+</div>
+<div>
+<h4 class="font-headline-md text-primary">Urban Arts Collective</h4>
+<p class="font-body-md text-on-surface-variant mt-1">Expressing reconciliation through music and visual art.</p>
+</div>
+<button onclick="window.location.href='../pgpw_registration_flow_mobile/code.html'" class="w-full py-3 border-2 border-primary text-primary font-label-bold rounded-lg mt-2">Join Artists</button>
+</div>
+<!-- Card 3 -->
+<div class="bg-white border border-outline-variant p-5 rounded-xl flex flex-col gap-4 active:scale-95 transition-transform">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+</div>
+<div class="px-3 py-1 bg-[#E7F9FF] border-2 border-[#1B8AB3] rounded-full">
+<span class="text-[#1B8AB3] font-label-bold text-[10px] uppercase">Education</span>
+</div>
+</div>
+<div>
+<h4 class="font-headline-md text-primary">Peace Academy</h4>
+<p class="font-body-md text-on-surface-variant mt-1">Scholarships and mentorship for inner-city youth.</p>
+</div>
+<button onclick="window.location.href='../pgpw_registration_flow_mobile/code.html'" class="w-full py-3 border-2 border-primary text-primary font-label-bold rounded-lg mt-2">Apply for Grant</button>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="bg-primary py-12 px-4">
+<div class="grid grid-cols-2 gap-4 text-center">
+<div class="p-4 border border-on-primary/20 rounded-lg">
+<div class="font-display-lg text-on-primary text-2xl">420+</div>
+<div class="font-caption text-on-primary/60 uppercase">Mediators</div>
+</div>
+<div class="p-4 border border-on-primary/20 rounded-lg">
+<div class="font-display-lg text-on-primary text-2xl">15k</div>
+<div class="font-caption text-on-primary/60 uppercase">Members</div>
+</div>
+<div class="p-4 border border-on-primary/20 rounded-lg">
+<div class="font-display-lg text-on-primary text-2xl">85</div>
+<div class="font-caption text-on-primary/60 uppercase">Cities</div>
+</div>
+<div class="p-4 border border-on-primary/20 rounded-lg">
+<div class="font-display-lg text-on-primary text-2xl">100%</div>
+<div class="font-caption text-on-primary/60 uppercase">Non-Violent</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-4 flex flex-col items-center gap-8 bg-primary border-t-4 border-primary">
+<h2 class="font-headline-md text-headline-md text-on-primary">PeaceGangPeaceWorld</h2>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="font-caption text-on-primary/80 uppercase tracking-widest" href="#">Quick Links</a>
+<a class="font-caption text-on-primary/80 uppercase tracking-widest" href="../pgpw_safety_reporting_mobile/code.html">Crisis Resources</a>
+<a class="font-caption text-on-primary/80 uppercase tracking-widest" href="#">Legal</a>
+<a class="font-caption text-on-primary/80 uppercase tracking-widest" href="../pgpw_safety_reporting_mobile/code.html">Safety Policy</a>
+</nav>
+<div class="text-center">
+<p class="font-caption text-on-primary/60 max-w-xs mx-auto">
+                © 2024 PeaceGangPeaceWorld. All Rights Reserved. Peace-building disclaimer: This platform is dedicated to non-violence and mediator neutrality.
+            </p>
+</div>
+<div class="flex gap-6 mt-4">
+<span class="material-symbols-outlined text-on-primary" data-icon="share">share</span>
+<span class="material-symbols-outlined text-on-primary" data-icon="public">public</span>
+<span class="material-symbols-outlined text-on-primary" data-icon="verified_user">verified_user</span>
+</div>
+</footer>
+<!-- Mobile Bottom Navigation Bar (Fixed) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-surface-container-lowest border-t border-outline-variant flex justify-around items-center py-3 px-2 z-50 md:hidden">
+<a class="flex flex-col items-center text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-label-bold">Home</span>
+</a>
+<a class="flex flex-col items-center text-on-surface-variant" href="../pgpw_forum_categories_mobile/code.html">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="text-[10px] font-label-bold">Forums</span>
+</a>
+<a class="flex flex-col items-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="text-[10px] font-label-bold">Members</span>
+</a>
+<a class="flex flex-col items-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-label-bold">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions for touch feedback
+        document.querySelectorAll('button, .bg-white.border').forEach(el => {
+            el.addEventListener('touchstart', () => {
+                el.style.transform = 'scale(0.98)';
+                el.style.transition = 'transform 0.1s ease';
+            });
+            el.addEventListener('touchend', () => {
+                el.style.transform = 'scale(1)';
+            });
+        });
+
+        // Sticky header transparency logic
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="en" class="light" style=""><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#dfe0e0",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#000000",
+                        "tertiary": "#000000",
+                        "surface-container-high": "#e2e8f8",
+                        "surface-container-low": "#f0f3ff",
+                        "inverse-on-surface": "#ebf1ff",
+                        "on-primary-container": "#848484",
+                        "tertiary-fixed": "#e1e2e4",
+                        "secondary-fixed": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#191c1e",
+                        "outline-variant": "#cfc4c5",
+                        "primary-container": "#1b1b1b",
+                        "surface-tint": "#5e5e5e",
+                        "on-surface": "#151c27",
+                        "inverse-surface": "#2a313d",
+                        "surface-bright": "#f9f9ff",
+                        "on-surface-variant": "#4c4546",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#191c1e",
+                        "surface-variant": "#dce2f3",
+                        "on-background": "#151c27",
+                        "surface-container": "#e7eefe",
+                        "background": "#f9f9ff",
+                        "surface": "#f9f9ff",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-primary-fixed": "#1b1b1b",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-tertiary-container": "#828486",
+                        "surface-container-highest": "#dce2f3",
+                        "outline": "#7e7576",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-secondary-container": "#616363",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#c6c6c6",
+                        "on-secondary-fixed-variant": "#454747",
+                        "secondary": "#5d5f5f",
+                        "surface-dim": "#d3daea",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "tertiary-fixed-dim": "#c5c6c8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "0.5rem",
+                        "stack-md": "1rem",
+                        "container-max": "1280px",
+                        "gutter": "1.5rem",
+                        "margin-mobile": "1rem",
+                        "margin-desktop": "2.5rem",
+                        "stack-lg": "2rem"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "caption": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "label-bold": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "1.4", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    }catch(_e){}</script></head><body class="bg-background text-on-background font-body-md min-h-screen flex flex-col md:flex-row">
+
+    <!-- SideNavBar -->
+    <aside class="hidden md:flex flex-col h-screen w-64 docked left-0 bg-surface-container-low dark:bg-surface-container-highest border-r border-outline-variant gap-stack-sm py-stack-md overflow-y-auto sticky top-0">
+        <div class="px-margin-desktop mb-stack-md">
+            <h2 class="text-headline-md font-headline-md text-primary">User Summary</h2>
+            <p class="font-caption text-caption text-on-surface-variant">Peace Builder</p>
+        </div>
+        <nav class="flex flex-col w-full font-label-bold text-label-bold">
+            <a href="../pgpw_news_feed/code.html" class="text-on-surface-variant dark:text-on-surface hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 hover:bg-secondary-fixed-dim dark:hover:bg-secondary-fixed scale-95 transition-transform duration-150">
+                <span class="material-symbols-outlined">rss_feed</span>News Feed
+            </a>
+            <a href="#" class="text-on-surface-variant dark:text-on-surface hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 hover:bg-secondary-fixed-dim dark:hover:bg-secondary-fixed scale-95 transition-transform duration-150">
+                <span class="material-symbols-outlined">person</span>Profile
+            </a>
+            <a href="#" class="text-on-surface-variant dark:text-on-surface hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 hover:bg-secondary-fixed-dim dark:hover:bg-secondary-fixed scale-95 transition-transform duration-150">
+                <span class="material-symbols-outlined">group</span>Friends
+            </a>
+            <a href="#" class="text-on-surface-variant dark:text-on-surface hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 hover:bg-secondary-fixed-dim dark:hover:bg-secondary-fixed scale-95 transition-transform duration-150">
+                <span class="material-symbols-outlined">chat</span>Messages
+            </a>
+            <a href="../pgpw_forum_categories/code.html" class="text-on-surface-variant dark:text-on-surface hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 hover:bg-secondary-fixed-dim dark:hover:bg-secondary-fixed scale-95 transition-transform duration-150">
+                <span class="material-symbols-outlined">forum</span>Forums
+            </a>
+            
+            
+            
+            
+            <a href="#" class="bg-primary text-on-primary rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 hover:bg-secondary-fixed-dim dark:hover:bg-secondary-fixed scale-95 transition-transform duration-150">
+                <span class="material-symbols-outlined">settings</span>Settings
+            </a>
+        </nav>
+    </aside>
+
+    <main class="flex-1 flex flex-col min-w-0">
+        <!-- TopNavBar (Mobile only for Dashboard intent context) -->
+        <header class="md:hidden flex justify-between items-center w-full px-margin-mobile py-4 bg-surface-container-lowest border-b-2 border-primary sticky top-0 z-50">
+            <div class="font-display-lg text-headline-md font-extrabold text-primary">PeaceGangPeaceWorld</div>
+            <div class="flex gap-4">
+                <span class="material-symbols-outlined text-primary cursor-pointer">menu</span>
+            </div>
+        </header>
+
+        <div class="p-gutter md:p-margin-desktop max-w-container-max mx-auto w-full flex-1">
+            <header class="mb-stack-lg">
+                <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-stack-sm">Admin &amp; Moderation</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">Platform oversight and safety management.</p>
+            </header>
+
+            <!-- Stats Grid -->
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-stack-lg">
+                <div class="bg-surface-container-lowest border border-outline-variant p-stack-md rounded-lg relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-3 opacity-10">
+                        <span class="material-symbols-outlined text-display-lg">group</span>
+                    </div>
+                    <h3 class="font-label-bold text-label-bold text-on-surface-variant mb-2">Total Members</h3>
+                    <p class="font-display-lg text-display-lg text-primary">12,450</p>
+                    <p class="font-caption text-caption text-secondary mt-2 flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[16px]">arrow_upward</span> 12% this week
+                    </p>
+                </div>
+                
+                <div class="bg-surface-container-lowest border border-outline-variant p-stack-md rounded-lg relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-3 opacity-10">
+                        <span class="material-symbols-outlined text-display-lg">how_to_reg</span>
+                    </div>
+                    <h3 class="font-label-bold text-label-bold text-on-surface-variant mb-2">Active Now</h3>
+                    <p class="font-display-lg text-display-lg text-primary">1,204</p>
+                    <p class="font-caption text-caption text-secondary mt-2 flex items-center gap-1">
+                         Steady
+                    </p>
+                </div>
+
+                <div class="bg-surface-container-lowest border border-outline-variant p-stack-md rounded-lg relative overflow-hidden border-l-4 border-l-error">
+                    <div class="absolute top-0 right-0 p-3 opacity-10">
+                        <span class="material-symbols-outlined text-display-lg">report</span>
+                    </div>
+                    <h3 class="font-label-bold text-label-bold text-on-surface-variant mb-2">Reported Items</h3>
+                    <p class="font-display-lg text-display-lg text-primary">45</p>
+                    <p class="font-caption text-caption text-error mt-2 flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[16px]">warning</span> Action required
+                    </p>
+                </div>
+
+                <div class="bg-surface-container-lowest border border-outline-variant p-stack-md rounded-lg relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-3 opacity-10">
+                        <span class="material-symbols-outlined text-display-lg">block</span>
+                    </div>
+                    <h3 class="font-label-bold text-label-bold text-on-surface-variant mb-2">Suspended</h3>
+                    <p class="font-display-lg text-display-lg text-primary">12</p>
+                    <p class="font-caption text-caption text-secondary mt-2 flex items-center gap-1">
+                        Accounts restricted
+                    </p>
+                </div>
+            </section>
+
+            <div class="grid grid-cols-1 gap-gutter">
+                <!-- Reported Content -->
+                <section class="bg-surface-container-lowest border border-outline-variant rounded-lg flex flex-col">
+                    <div class="p-stack-md border-b border-outline-variant halftone-bg">
+                        <h2 class="font-headline-md text-headline-md text-primary">Reported Content</h2>
+                    </div>
+                    <div class="flex-1 overflow-y-auto max-h-[500px]">
+                        <ul class="divide-y divide-outline-variant">
+                            <li class="p-stack-md hover:bg-surface-container transition-colors">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-error">flag</span>
+                                        <span class="font-label-bold text-label-bold text-primary">Harassment Report</span>
+                                    </div>
+                                    <span class="font-caption text-caption text-on-surface-variant">10 mins ago</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-3">User @urban_peace reported a forum comment for aggressive language.</p>
+                                <div class="flex gap-2">
+                                    <button class="bg-primary text-on-primary font-label-bold text-label-bold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">Review</button>
+                                    <button class="bg-surface-container-lowest border-2 border-primary text-primary font-label-bold text-label-bold px-4 py-2 rounded-lg hover:bg-secondary-fixed transition-colors">Dismiss</button>
+                                </div>
+                            </li>
+                            <li class="p-stack-md hover:bg-surface-container transition-colors">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-error">flag</span>
+                                        <span class="font-label-bold text-label-bold text-primary">Spam Post</span>
+                                    </div>
+                                    <span class="font-caption text-caption text-on-surface-variant">1 hr ago</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-3">Automated flag: Multiple identical links posted in 'Community Events'.</p>
+                                <div class="flex gap-2">
+                                    <button class="bg-primary text-on-primary font-label-bold text-label-bold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">Review</button>
+                                    <button class="bg-surface-container-lowest border-2 border-primary text-primary font-label-bold text-label-bold px-4 py-2 rounded-lg hover:bg-secondary-fixed transition-colors">Dismiss</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        </main></body></html>

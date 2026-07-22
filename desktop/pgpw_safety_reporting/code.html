@@ -1,0 +1,390 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#dfe0e0",
+                      "on-tertiary": "#ffffff",
+                      "primary": "#000000",
+                      "tertiary": "#000000",
+                      "surface-container-high": "#e2e8f8",
+                      "surface-container-low": "#f0f3ff",
+                      "inverse-on-surface": "#ebf1ff",
+                      "on-primary-container": "#848484",
+                      "tertiary-fixed": "#e1e2e4",
+                      "secondary-fixed": "#e2e2e2",
+                      "error": "#ba1a1a",
+                      "tertiary-container": "#191c1e",
+                      "outline-variant": "#cfc4c5",
+                      "primary-container": "#1b1b1b",
+                      "surface-tint": "#5e5e5e",
+                      "on-surface": "#151c27",
+                      "inverse-surface": "#2a313d",
+                      "surface-bright": "#f9f9ff",
+                      "on-surface-variant": "#4c4546",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed": "#e2e2e2",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed": "#191c1e",
+                      "surface-variant": "#dce2f3",
+                      "on-background": "#151c27",
+                      "surface-container": "#e7eefe",
+                      "background": "#f9f9ff",
+                      "surface": "#f9f9ff",
+                      "on-primary-fixed-variant": "#474747",
+                      "on-primary-fixed": "#1b1b1b",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "on-tertiary-container": "#828486",
+                      "surface-container-highest": "#dce2f3",
+                      "outline": "#7e7576",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "on-tertiary-fixed-variant": "#444749",
+                      "on-secondary-container": "#616363",
+                      "error-container": "#ffdad6",
+                      "inverse-primary": "#c6c6c6",
+                      "on-secondary-fixed-variant": "#454747",
+                      "secondary": "#5d5f5f",
+                      "surface-dim": "#d3daea",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "tertiary-fixed-dim": "#c5c6c8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "0.5rem",
+                      "stack-md": "1rem",
+                      "container-max": "1280px",
+                      "gutter": "1.5rem",
+                      "margin-mobile": "1rem",
+                      "margin-desktop": "2.5rem",
+                      "stack-lg": "2rem"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "label-bold": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "display-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    }catch(_e){}</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md min-h-screen flex flex-col">
+
+    <!-- TopNavBar -->
+    <nav class="bg-surface-container-lowest border-b-2 border-primary w-full top-0 sticky z-50">
+        <div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+            <div class="font-display-lg text-headline-md font-extrabold text-primary">
+                PeaceGangPeaceWorld
+            </div>
+
+            <div class="hidden md:flex gap-6 items-center">
+                <a href="../pgpw_landing_page/code.html" class="text-on-surface-variant hover:bg-secondary-fixed hover:text-primary transition-all duration-200 ease-in-out px-3 py-2 rounded-lg font-body-md text-body-md">Home</a>
+                <a href="../pgpw_forum_categories/code.html" class="text-on-surface-variant hover:bg-secondary-fixed hover:text-primary transition-all duration-200 ease-in-out px-3 py-2 rounded-lg font-body-md text-body-md">Forums</a>
+                <a href="#" class="text-on-surface-variant hover:bg-secondary-fixed hover:text-primary transition-all duration-200 ease-in-out px-3 py-2 rounded-lg font-body-md text-body-md">Members</a>
+
+                <a href="#" class="text-primary font-bold border-b-2 border-primary px-3 py-2 rounded-lg font-body-md text-body-md">Peace Resources</a>
+                <a href="../pgpw_about_page/code.html" class="text-on-surface-variant hover:bg-secondary-fixed hover:text-primary transition-all duration-200 ease-in-out px-3 py-2 rounded-lg font-body-md text-body-md">About</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="text-primary hover:bg-secondary-fixed p-2 rounded-full transition-all duration-200 ease-in-out">
+                    <span class="material-symbols-outlined" data-icon="search">search</span>
+                </button>
+                <button class="text-primary hover:bg-secondary-fixed p-2 rounded-full transition-all duration-200 ease-in-out">
+                    <span class="material-symbols-outlined" data-icon="mail">mail</span>
+                </button>
+                <button class="text-primary hover:bg-secondary-fixed p-2 rounded-full transition-all duration-200 ease-in-out">
+                    <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+                </button>
+                <button onclick="window.location.href='../pgpw_registration_flow/code.html'" class="bg-primary text-on-primary font-label-bold text-label-bold px-4 py-2 rounded-DEFAULT hover:opacity-90 transition-opacity">
+                    Sign Up
+                </button>
+                <button class="bg-surface-container-lowest border-2 border-primary text-primary font-label-bold text-label-bold px-4 py-2 rounded-DEFAULT hover:bg-secondary-fixed transition-colors">
+                    Login
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex flex-1 max-w-container-max mx-auto w-full">
+        <!-- SideNavBar -->
+        <aside class="hidden md:flex flex-col w-64 bg-surface-container-low border-r border-outline-variant py-stack-md overflow-y-auto min-h-[calc(100vh-80px)]">
+            <div class="px-6 mb-8">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary" data-icon="person">person</span>
+                    </div>
+                    <div class="">
+                        <h2 class="text-headline-md font-headline-md text-primary">User Summary</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Peace Builder</p>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="flex flex-col gap-stack-sm px-2">
+                <a href="../pgpw_news_feed/code.html" class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold transition-transform duration-150 hover:scale-95">
+                    <span class="material-symbols-outlined" data-icon="rss_feed">rss_feed</span>
+                    News Feed
+                </a>
+                <a href="#" class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold transition-transform duration-150 hover:scale-95">
+                    <span class="material-symbols-outlined" data-icon="person">person</span>
+                    Profile
+                </a>
+                <a href="#" class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold transition-transform duration-150 hover:scale-95">
+                    <span class="material-symbols-outlined" data-icon="group">group</span>
+                    Friends
+                </a>
+                <a href="#" class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold transition-transform duration-150 hover:scale-95">
+                    <span class="material-symbols-outlined" data-icon="chat">chat</span>
+                    Messages
+                </a>
+                <a href="../pgpw_forum_categories/code.html" class="text-on-surface-variant hover:bg-secondary-container rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold transition-transform duration-150 hover:scale-95">
+                    <span class="material-symbols-outlined" data-icon="forum">forum</span>
+                    Forums
+                </a>
+                
+                
+                
+                
+                <a href="../pgpw_admin_dashboard/code.html" class="bg-primary text-on-primary rounded-lg mx-2 my-1 flex items-center gap-3 px-4 py-3 font-label-bold text-label-bold transition-transform duration-150 hover:scale-95">
+                    <span class="material-symbols-outlined" data-icon="settings">settings</span>
+                    Settings
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content-->
+        <main class="flex-1 p-margin-desktop bg-background">
+            
+            <header class="mb-stack-lg border-b border-outline-variant pb-stack-md">
+                <h1 class="font-headline-lg text-headline-lg md:font-display-lg md:text-display-lg text-primary mb-2">Safety &amp; Reporting</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Your security and the neutrality of this platform are our top priorities. Use the tools below to report violations, manage your privacy, or access immediate crisis resources.</p>
+            </header>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                
+                <!-- Left Column: Primary Actions -->
+                <div class="lg:col-span-8 flex flex-col gap-stack-lg">
+                    
+                    <!-- Reporting Form Card -->
+                    <section class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 shadow-[0_0_0_1px_rgba(0,0,0,0.05)]">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="material-symbols-outlined text-error text-3xl" data-icon="report">report</span>
+                            <h2 class="font-headline-md text-headline-md text-primary">Report a Violation</h2>
+                        </div>
+                        
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block font-label-bold text-label-bold text-primary mb-2">Violation Type</label>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <label class="flex items-center gap-3 p-4 border border-outline-variant rounded-DEFAULT cursor-pointer hover:bg-surface-container-low transition-colors">
+                                        <input type="radio" name="violation_type" value="threatening" class="text-primary focus:ring-primary border-outline">
+                                        <span class="font-body-md text-body-md">Threatening Language</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 p-4 border border-outline-variant rounded-DEFAULT cursor-pointer hover:bg-surface-container-low transition-colors">
+                                        <input type="radio" name="violation_type" value="recruitment" class="text-primary focus:ring-primary border-outline">
+                                        <span class="font-body-md text-body-md">Recruitment</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 p-4 border border-outline-variant rounded-DEFAULT cursor-pointer hover:bg-surface-container-low transition-colors">
+                                        <input type="radio" name="violation_type" value="illegal" class="text-primary focus:ring-primary border-outline">
+                                        <span class="font-body-md text-body-md">Illegal Activity</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <label class="block font-label-bold text-label-bold text-primary mb-2">Provide Details (Optional but helpful)</label>
+                                <textarea class="w-full bg-surface-container-lowest border border-outline-variant rounded-DEFAULT p-3 font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" rows="4" placeholder="Describe the incident, including links or usernames if applicable..."></textarea>
+                            </div>
+                            
+                            <div class="bg-surface-container-low p-4 rounded-DEFAULT border border-outline-variant">
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary mt-1" data-icon="info">info</span>
+                                    <div class="">
+                                        <h4 class="font-label-bold text-label-bold text-primary">Anonymous Reporting</h4>
+                                        <p class="font-caption text-caption text-on-surface-variant mt-1">Reports are handled with strict confidentiality. The reported user will not be notified of your identity.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full md:w-auto bg-primary text-on-primary font-label-bold text-label-bold px-8 py-3 rounded-DEFAULT hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                                Submit Report
+                                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+                            </button>
+                        </form>
+                    </section>
+
+                    <!-- Privacy Controls -->
+                    
+
+                </div>
+
+                <!-- Right Column: Resources & Guidelines -->
+                <div class="lg:col-span-4 flex flex-col gap-stack-lg">
+                    
+                    <!-- Crisis Resources (High Visibility) -->
+                    <div class="bg-error-container border border-error rounded-lg p-6 relative overflow-hidden">
+                        <div class="absolute -right-4 -top-4 opacity-10">
+                            <span class="material-symbols-outlined text-9xl text-error" data-icon="emergency">emergency</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+                                <h3 class="font-headline-md text-headline-md text-on-error-container">Immediate Help</h3>
+                            </div>
+                            <p class="font-body-md text-body-md text-on-error-container mb-6">If you or someone else is in immediate physical danger, please contact local emergency services immediately.</p>
+                            
+                            <div class="space-y-3">
+                                <a href="tel:911" class="flex items-center justify-between bg-surface-container-lowest border border-error rounded-DEFAULT p-3 hover:bg-surface-container-low transition-colors">
+                                    <span class="font-label-bold text-label-bold text-error">Emergency Services</span>
+                                    <span class="material-symbols-outlined text-error" data-icon="call">call</span>
+                                </a>
+                                <a href="#" class="flex items-center justify-between bg-surface-container-lowest border border-error rounded-DEFAULT p-3 hover:bg-surface-container-low transition-colors">
+                                    <span class="font-label-bold text-label-bold text-error">National Crisis Hotline</span>
+                                    <span class="material-symbols-outlined text-error" data-icon="call">call</span>
+                                </a>
+                                <a href="#" class="flex items-center justify-between bg-surface-container-lowest border border-error rounded-DEFAULT p-3 hover:bg-surface-container-low transition-colors">
+                                    <span class="font-label-bold text-label-bold text-error">Neutrality Contact Line</span>
+                                    <span class="material-symbols-outlined text-error" data-icon="forum">forum</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Community Guidelines Reminder -->
+                    <div class="bg-surface-container-high border border-outline-variant rounded-lg p-6">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="material-symbols-outlined text-primary" data-icon="gavel">gavel</span>
+                            <h3 class="font-headline-md text-headline-md text-primary">Platform Pillars</h3>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-4">By participating in PGPW, you agree to uphold our core tenets of Radical Neutrality.</p>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-0.5" data-icon="check_circle">check_circle</span>
+                                <div>
+                                    <strong class="font-label-bold text-label-bold text-primary block">Zero Violence Tolerance</strong>
+                                    <span class="font-caption text-caption text-on-surface-variant">No threats, intimidation, or promotion of harm.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-0.5" data-icon="check_circle">check_circle</span>
+                                <div>
+                                    <strong class="font-label-bold text-label-bold text-primary block">Respect the Neutral Ground</strong>
+                                    <span class="font-caption text-caption text-on-surface-variant">Leave conflicts at the door; this is a space for dialogue.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-0.5" data-icon="check_circle">check_circle</span>
+                                <div>
+                                    <strong class="font-label-bold text-label-bold text-primary block">No Recruitment</strong>
+                                    <span class="font-caption text-caption text-on-surface-variant">Actively discouraging recruitment into violent or illegal organizations.</span>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <a href="../pgpw_about_page/code.html" class="inline-block mt-6 font-label-bold text-label-bold text-primary underline hover:text-secondary transition-colors">Read Full Guidelines</a>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-on-primary w-full mt-auto py-stack-lg px-margin-desktop flex flex-col items-center gap-stack-md border-t-4 border-primary font-caption text-caption">
+        <div class="font-headline-md text-headline-md text-on-primary mb-4">
+            PeaceGangPeaceWorld
+        </div>
+        
+        <div class="flex flex-wrap justify-center gap-6 mb-4">
+            </div></footer></body></html>
