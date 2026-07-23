@@ -149,7 +149,8 @@ export default function AdminPage() {
       .from("reports")
       .select("id, category, description, created_at, target_type, target_id, profiles!reports_reporter_id_fkey(username)")
       .eq("status", "pending")
-      .order("created_at", { ascending: false });
+      .order("created_at", { ascending: false })
+      .limit(5);
 
     if (error) {
       setError(error.message);
@@ -239,7 +240,7 @@ export default function AdminPage() {
         "id, action, notes, created_at, moderator:profiles!moderation_actions_moderator_id_fkey(username), subject:profiles!moderation_actions_subject_id_fkey(username)",
       )
       .order("created_at", { ascending: false })
-      .limit(20);
+      .limit(5);
 
     if (error) {
       setError(error.message);
@@ -317,7 +318,7 @@ export default function AdminPage() {
       .from("profiles")
       .select("id, username, avatar_url, community_affiliation, role, is_suspended, created_at")
       .order("created_at", { ascending: false })
-      .limit(10);
+      .limit(5);
     if (search.trim()) query = query.ilike("username", `%${search.trim()}%`);
 
     const { data, error } = await query;
@@ -380,7 +381,7 @@ export default function AdminPage() {
       threadTitle: r.thread?.title,
     }));
 
-    setPostsQueue([...feedItems, ...forumItems].sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1)).slice(0, 6));
+    setPostsQueue([...feedItems, ...forumItems].sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1)).slice(0, 5));
   };
 
   const refreshContactMessages = async () => {
@@ -1020,7 +1021,7 @@ export default function AdminPage() {
               Queue is clear — no pending reports.
             </p>
           ) : (
-            <ul className="max-h-[600px] divide-y divide-outline-variant overflow-y-auto">
+            <ul className="divide-y divide-outline-variant">
               {reports.map((report) => {
                 const busy = busyReportId === report.id;
                 const categoryLabel =
@@ -1118,7 +1119,7 @@ export default function AdminPage() {
               No moderation actions yet.
             </p>
           ) : (
-            <ul className="max-h-[600px] divide-y divide-outline-variant overflow-y-auto">
+            <ul className="divide-y divide-outline-variant">
               {auditLog.map((entry) => (
                 <li key={entry.id} className="flex items-start gap-3 p-stack-md">
                   <span className="material-symbols-outlined mt-0.5 text-primary">

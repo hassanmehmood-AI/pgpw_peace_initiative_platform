@@ -41,9 +41,9 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="border-b border-secondary-fixed">
-        <div className="mx-auto flex w-full max-w-container-max flex-col items-center gap-gutter px-margin-mobile py-stack-lg md:flex-row md:px-margin-desktop md:py-[80px]">
-          <div className="z-10 flex flex-1 flex-col gap-stack-md">
+      <section className="border-b border-secondary-fixed md:h-[calc(100vh-6rem)]">
+        <div className="mx-auto flex h-full w-full max-w-container-max flex-col items-center gap-gutter px-margin-mobile py-stack-lg md:flex-row md:px-margin-desktop md:py-0">
+          <div className="z-10 flex w-full flex-col justify-center gap-stack-md md:h-full md:flex-1">
             <h1 className="font-display-lg text-display-lg uppercase leading-none tracking-tighter text-primary md:text-[64px]">
               Ending Violence
               <br />
@@ -54,16 +54,26 @@ export default function Home() {
               foster positive connections, communication, and digital
               community building across neutral territory.
             </p>
-            <div className="mt-6 flex flex-wrap gap-4">
-              <Button href="/register" size="lg" variant="primary" className="uppercase">
+            <div className="mt-6 flex gap-3 sm:gap-4">
+              <Button
+                href="/register"
+                size="lg"
+                variant="primary"
+                className="flex-1 !px-4 !py-3 text-sm sm:flex-none sm:!px-6 sm:!py-3 sm:text-base uppercase"
+              >
                 Join the Movement
               </Button>
-              <Button href="/forums" size="lg" variant="secondary" className="uppercase">
+              <Button
+                href="/forums"
+                size="lg"
+                variant="secondary"
+                className="flex-1 !px-4 !py-3 text-sm sm:flex-none sm:!px-6 sm:!py-3 sm:text-base uppercase"
+              >
                 Explore Communities
               </Button>
             </div>
           </div>
-          <div className="group relative mt-8 h-[400px] w-full flex-1 md:mt-0 md:h-[600px]">
+          <div className="group relative mt-8 h-[400px] w-full shrink-0 md:mt-0 md:h-[calc(100%-4rem)] md:flex-1">
             <div className="halftone-bg ambient-shadow absolute inset-0 overflow-hidden rounded-xl border-4 border-primary">
               <Image
                 src="/images/landing/hero-unity.jpg"
@@ -100,7 +110,7 @@ export default function Home() {
                 <Card
                   key={community}
                   hoverable
-                  className={`affiliation-card-${community} flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center`}
+                  className={`affiliation-card-${community} flex flex-col items-center justify-between gap-4 sm:flex-row`}
                 >
                   <div className="flex items-center gap-4">
                     <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-white/60 bg-white/15">
@@ -117,7 +127,12 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                  <Button href="/register" variant="secondary" className="w-full sm:w-auto">
+                  <Button
+                    href="/register"
+                    variant="ghost"
+                    size="sm"
+                    className="!font-normal border-2 border-white/60 !bg-white/15 !text-white hover:!bg-white/25"
+                  >
                     Register
                   </Button>
                 </Card>

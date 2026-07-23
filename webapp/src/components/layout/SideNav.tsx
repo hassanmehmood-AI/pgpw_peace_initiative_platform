@@ -2,7 +2,6 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-import { Logo } from "@/components/ui/Logo";
 import { Avatar } from "@/components/ui/Avatar";
 import { useSession } from "@/lib/session";
 import type { Community } from "@/components/ui/AffiliationChip";
@@ -49,25 +48,24 @@ export function SideNav({ user, isAdmin = false }: SideNavProps) {
   };
 
   return (
-    <aside className="sticky top-0 z-40 hidden h-screen w-64 flex-shrink-0 flex-col border-r border-outline-variant bg-surface-container-low py-stack-md md:flex">
-      <div className="mb-4 flex flex-col items-center border-b border-outline-variant px-6 pb-6">
-        <Logo wordmark={false} size="sm" className="mb-4" />
+    <aside className="z-40 hidden h-full w-64 flex-shrink-0 flex-col justify-between overflow-hidden border-r border-outline-variant bg-surface-container-low md:flex">
+      <div className="flex flex-col items-center gap-0.5 border-b border-outline-variant px-6 py-3">
         <Avatar
           name={user?.name ?? "Guest"}
           community={user?.community ?? "neutral"}
           avatarUrl={user?.avatarUrl}
-          size="h-20 w-20 mb-3"
-          textClass="font-headline-lg text-headline-lg"
+          size="h-14 w-14 mb-1.5"
+          textClass="font-headline-md text-headline-md"
         />
-        <h2 className="text-center text-headline-md font-headline-md text-primary">
+        <h2 className="text-center font-label-bold text-label-bold text-primary">
           {user?.name ?? "Guest"}
         </h2>
-        <p className="mt-1 font-label-bold text-label-bold text-on-surface-variant">
+        <p className="font-caption text-caption text-on-surface-variant">
           {user?.role ?? "Peace Builder"}
         </p>
       </div>
 
-      <nav className="flex flex-1 flex-col gap-stack-sm overflow-y-auto px-2 pb-24">
+      <nav className="flex min-h-0 flex-1 flex-col justify-center gap-0.5 px-2">
         {navItems.map((item) => {
           const active = pathname === item.href;
           return (
@@ -76,11 +74,11 @@ export function SideNav({ user, isAdmin = false }: SideNavProps) {
               href={item.href}
               className={
                 active
-                  ? "mx-2 my-1 flex items-center gap-3 rounded-lg bg-primary px-4 py-3 font-label-bold text-label-bold text-on-primary transition-transform duration-150"
-                  : "mx-2 my-1 flex items-center gap-3 rounded-lg px-4 py-3 font-label-bold text-label-bold text-on-surface-variant transition-transform duration-150 hover:bg-secondary-fixed-dim"
+                  ? "flex items-center gap-3 rounded-lg bg-primary px-4 py-2 font-label-bold text-label-bold text-on-primary transition-transform duration-150"
+                  : "flex items-center gap-3 rounded-lg px-4 py-2 font-label-bold text-label-bold text-on-surface-variant transition-transform duration-150 hover:bg-secondary-fixed-dim"
               }
             >
-              <span className="material-symbols-outlined">{item.icon}</span>
+              <span className="material-symbols-outlined text-[20px]">{item.icon}</span>
               {item.label}
             </Link>
           );
@@ -91,24 +89,25 @@ export function SideNav({ user, isAdmin = false }: SideNavProps) {
             href="/admin"
             className={
               pathname === "/admin"
-                ? "mx-2 my-1 mt-auto flex items-center gap-3 rounded-lg bg-primary px-4 py-3 font-label-bold text-label-bold text-on-primary"
-                : "mx-2 my-1 mt-auto flex items-center gap-3 rounded-lg px-4 py-3 font-label-bold text-label-bold text-on-surface-variant hover:bg-secondary-fixed-dim"
+                ? "flex items-center gap-3 rounded-lg bg-primary px-4 py-2 font-label-bold text-label-bold text-on-primary"
+                : "flex items-center gap-3 rounded-lg px-4 py-2 font-label-bold text-label-bold text-on-surface-variant hover:bg-secondary-fixed-dim"
             }
           >
-            <span className="material-symbols-outlined">shield_person</span>
+            <span className="material-symbols-outlined text-[20px]">shield_person</span>
             Admin
           </Link>
         )}
       </nav>
 
-      <div className="border-t border-outline-variant px-2 pt-stack-sm">
+      <div className="flex justify-end border-t border-outline-variant px-4 py-2">
         <button
           type="button"
           onClick={handleLogout}
-          className="mx-2 my-1 flex w-[calc(100%-1rem)] items-center gap-3 rounded-lg px-4 py-3 font-label-bold text-label-bold text-on-surface-variant transition-colors hover:bg-error-container hover:text-error"
+          title="Log Out"
+          aria-label="Log Out"
+          className="flex h-10 w-10 items-center justify-center rounded-lg text-on-surface-variant transition-colors hover:bg-error-container hover:text-error"
         >
-          <span className="material-symbols-outlined">logout</span>
-          Log Out
+          <span className="material-symbols-outlined text-[20px]">logout</span>
         </button>
       </div>
     </aside>

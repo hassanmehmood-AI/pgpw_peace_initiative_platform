@@ -23,8 +23,8 @@ export function TopNav() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 border-b-2 border-primary bg-surface-container-lowest">
-      <div className="mx-auto flex w-full max-w-container-max items-center justify-between px-margin-mobile py-4 md:px-margin-desktop">
+    <nav className="sticky top-0 z-50 h-24 border-b-2 border-primary bg-surface-container-lowest">
+      <div className="mx-auto flex h-full w-full max-w-container-max items-center justify-between px-margin-mobile md:px-margin-desktop">
         <Logo />
 
         <div className="hidden items-center gap-6 md:flex">

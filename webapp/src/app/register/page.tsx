@@ -269,15 +269,15 @@ export default function RegisterPage() {
         <div className="flex flex-col rounded-lg border border-outline-variant bg-surface-container-lowest shadow-[0_0_0_1px_rgba(0,0,0,0.05)]" style={{ minHeight: 600 }}>
 
           {/* Header + progress */}
-          <div className="flex flex-col gap-stack-md rounded-t-lg border-b border-outline-variant bg-surface-bright p-8">
-            <div className="flex items-center justify-between">
+          <div className="flex flex-col gap-stack-md rounded-t-lg border-b border-outline-variant bg-surface-bright p-4 md:p-8">
+            <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="flex items-center gap-3">
                 <Logo wordmark={false} size="sm" />
                 <h1 className="font-headline-md text-headline-md text-primary tracking-tight">
                   Join PeaceGangPeaceWorld
                 </h1>
               </div>
-              <span className="font-caption text-caption text-on-surface-variant rounded-full border border-outline-variant bg-surface-container-high px-3 py-1">
+              <span className="shrink-0 font-caption text-caption text-on-surface-variant rounded-full border border-outline-variant bg-surface-container-high px-3 py-1">
                 Step {step} of {TOTAL_STEPS}
               </span>
             </div>
@@ -316,12 +316,12 @@ export default function RegisterPage() {
           {/* ---------------------------------------------------------------- */}
           {/* Step content                                                     */}
           {/* ---------------------------------------------------------------- */}
-          <div className="relative flex flex-grow flex-col overflow-hidden p-8">
+          <div className="relative flex flex-grow flex-col overflow-hidden p-4 md:p-8">
 
             {/* ---- STEP 1: Affiliation Picker ---- */}
             <div
               className={`flex flex-col transition-all duration-300 ${
-                step === 1 ? "pointer-events-auto flex-grow opacity-100" : "pointer-events-none absolute inset-8 opacity-0"
+                step === 1 ? "pointer-events-auto flex-grow opacity-100" : "pointer-events-none absolute inset-4 opacity-0 md:inset-8"
               }`}
               aria-hidden={step !== 1}
             >
@@ -375,7 +375,7 @@ export default function RegisterPage() {
             {/* ---- STEP 2: Profile (username + email + password) ---- */}
             <div
               className={`flex flex-col transition-all duration-300 ${
-                step === 2 ? "pointer-events-auto flex-grow opacity-100" : "pointer-events-none absolute inset-8 opacity-0"
+                step === 2 ? "pointer-events-auto flex-grow opacity-100" : "pointer-events-none absolute inset-4 opacity-0 md:inset-8"
               }`}
               aria-hidden={step !== 2}
             >
@@ -484,7 +484,7 @@ export default function RegisterPage() {
             {/* ---- STEP 3: Email Verification ---- */}
             <div
               className={`flex flex-col transition-all duration-300 ${
-                step === VERIFICATION_STEP ? "pointer-events-auto flex-grow opacity-100" : "pointer-events-none absolute inset-8 opacity-0"
+                step === VERIFICATION_STEP ? "pointer-events-auto flex-grow opacity-100" : "pointer-events-none absolute inset-4 opacity-0 md:inset-8"
               }`}
               aria-hidden={step !== VERIFICATION_STEP}
             >
@@ -535,7 +535,7 @@ export default function RegisterPage() {
             {/* ---- STEP 4: Community Agreement ---- */}
             <div
               className={`flex flex-col transition-all duration-300 ${
-                step === AGREEMENT_STEP ? "pointer-events-auto flex-grow opacity-100" : "pointer-events-none absolute inset-8 opacity-0"
+                step === AGREEMENT_STEP ? "pointer-events-auto flex-grow opacity-100" : "pointer-events-none absolute inset-4 opacity-0 md:inset-8"
               }`}
               aria-hidden={step !== AGREEMENT_STEP}
             >
@@ -596,7 +596,7 @@ export default function RegisterPage() {
           {/* ---------------------------------------------------------------- */}
           {/* Navigation footer                                                */}
           {/* ---------------------------------------------------------------- */}
-          <div className="flex items-center justify-between rounded-b-lg border-t border-outline-variant bg-surface-bright p-8">
+          <div className="flex items-center justify-between rounded-b-lg border-t border-outline-variant bg-surface-bright p-4 md:p-8">
             {/* Back — invisible on step 1, visible after */}
             <button
               type="button"

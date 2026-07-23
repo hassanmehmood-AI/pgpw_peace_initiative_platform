@@ -5,6 +5,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { SideNav } from "@/components/layout/SideNav";
 import { BottomNav } from "@/components/layout/BottomNav";
 import { NotificationBell } from "@/components/layout/NotificationBell";
+import { Logo } from "@/components/ui/Logo";
 import { useSession, roleLabel, canModerate } from "@/lib/session";
 
 export default function AppLayout({
@@ -81,6 +82,10 @@ export default function AppLayout({
 
   return (
     <div className="flex h-[100dvh] flex-col overflow-hidden">
+      <header className="flex shrink-0 items-center justify-between border-b border-outline-variant bg-surface-container-lowest px-margin-mobile py-2 md:px-margin-desktop">
+        <Logo size="sm" />
+        <NotificationBell userId={session.id} />
+      </header>
       <div className="flex flex-1 overflow-hidden">
         <SideNav
           user={{
@@ -92,9 +97,6 @@ export default function AppLayout({
           isAdmin={canModerate(session.role)}
         />
         <main className="flex-1 overflow-y-auto bg-surface pb-24 md:pb-0">
-          <div className="flex items-center justify-end border-b border-outline-variant bg-surface-container-lowest px-margin-mobile py-2 md:px-margin-desktop">
-            <NotificationBell userId={session.id} />
-          </div>
           {children}
         </main>
       </div>
