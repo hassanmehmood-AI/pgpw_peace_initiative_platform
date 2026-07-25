@@ -74,10 +74,10 @@ export default function Home() {
             </div>
           </div>
           <div className="group relative mt-8 h-[400px] w-full shrink-0 md:mt-0 md:h-[calc(100%-4rem)] md:flex-1">
-            <div className="halftone-bg ambient-shadow absolute inset-0 overflow-hidden rounded-xl border-4 border-primary">
+            <div className="bg-surface ambient-shadow absolute inset-0 overflow-hidden rounded-xl">
               <Image
-                src="/images/landing/hero-unity.jpg"
-                alt="A geometric light installation symbolizing unity and connection in an urban plaza at night"
+                src="/images/landing/hero-peace-dove.jpg"
+                alt="A dove carrying an olive branch, symbolizing peace and unity"
                 fill
                 priority
                 sizes="(min-width: 768px) 50vw, 100vw"

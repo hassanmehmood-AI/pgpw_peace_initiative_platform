@@ -6,13 +6,13 @@ type Tone = "dark" | "light";
 
 const sizePx: Record<Size, number> = {
   sm: 112,
-  md: 144,
+  md: 176,
   lg: 192,
 };
 
 const sizeClasses: Record<Size, string> = {
   sm: "h-14 w-14",
-  md: "h-18 w-18",
+  md: "h-20 w-20",
   lg: "h-24 w-24",
 };
 
