@@ -12,10 +12,16 @@ jobs:
     steps:
       - name: Ping Supabase REST API
         run: |
-          curl -sf "${SUPABASE_URL}/rest/v1/" \
+          status=$(curl -s -o response.txt -w "%{http_code}" \
+            "${SUPABASE_URL}/rest/v1/forum_categories?select=id&limit=1" \
             -H "apikey: ${SUPABASE_ANON_KEY}" \
-            -H "Authorization: Bearer ${SUPABASE_ANON_KEY}" \
-            -o /dev/null
+            -H "Authorization: Bearer ${SUPABASE_ANON_KEY}")
+          echo "HTTP status: $status"
+          cat response.txt
+          if [ "$status" -ge 400 ]; then
+            echo "::error::Supabase ping failed with HTTP $status"
+            exit 1
+          fi
         env:
           SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
