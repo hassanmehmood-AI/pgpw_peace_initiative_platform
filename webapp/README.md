@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+For daily Supabase keep-alive setup and deployed verification, see [KEEP_ALIVE.md](./KEEP_ALIVE.md).
+
 ## Getting Started
 
 First, run the development server:

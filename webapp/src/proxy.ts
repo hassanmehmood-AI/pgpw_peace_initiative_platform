@@ -16,6 +16,11 @@ const PROTECTED_PREFIXES = [
 ];
 
 export async function proxy(request: NextRequest) {
+  // The database probe handles its own optional cron secret, not a user session.
+  if (request.nextUrl.pathname === "/api/health") {
+    return NextResponse.next({ request });
+  }
+
   let response = NextResponse.next({ request });
 
   const supabase = createServerClient(

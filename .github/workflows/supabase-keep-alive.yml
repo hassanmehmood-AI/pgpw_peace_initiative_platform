@@ -2,23 +2,28 @@ name: Supabase Keep-Alive
 
 on:
   schedule:
-    # Runs daily at 03:00 UTC, well within Supabase's 7-day inactivity window
+    # Backup database check daily at 03:00 UTC (08:00 Pakistan time).
     - cron: "0 3 * * *"
   workflow_dispatch: {}
 
 jobs:
   ping:
     runs-on: ubuntu-latest
+    timeout-minutes: 2
     steps:
       - name: Ping Supabase REST API
         run: |
-          status=$(curl -s -o response.txt -w "%{http_code}" \
+          set -euo pipefail
+          : "${SUPABASE_URL:?Missing NEXT_PUBLIC_SUPABASE_URL repository secret}"
+          : "${SUPABASE_ANON_KEY:?Missing NEXT_PUBLIC_SUPABASE_ANON_KEY repository secret}"
+          status=$(curl --silent --show-error --fail-with-body \
+            --connect-timeout 10 --max-time 20 --retry 2 --retry-delay 3 \
+            -o response.txt -w "%{http_code}" \
             "${SUPABASE_URL}/rest/v1/forum_categories?select=id&limit=1" \
             -H "apikey: ${SUPABASE_ANON_KEY}" \
             -H "Authorization: Bearer ${SUPABASE_ANON_KEY}")
           echo "HTTP status: $status"
-          cat response.txt
-          if [ "$status" -ge 400 ]; then
+          if [ "$status" != "200" ]; then
             echo "::error::Supabase ping failed with HTTP $status"
             exit 1
           fi
