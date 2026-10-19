@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "test:rls": "node scripts/rls-tests.mjs"
+    "test:rls": "node scripts/rls-tests.mjs",
+    "test:browsers": "playwright test",
+    "test:browsers:install": "playwright install chromium firefox webkit"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",
@@ -21,6 +23,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@playwright/test": "^1.64.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -30,5 +33,12 @@
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^4.1.10"
-  }
+  },
+  "browserslist": [
+    "chrome >= 111",
+    "edge >= 111",
+    "firefox >= 128",
+    "safari >= 16.4",
+    "ios_saf >= 16.4"
+  ]
 }
