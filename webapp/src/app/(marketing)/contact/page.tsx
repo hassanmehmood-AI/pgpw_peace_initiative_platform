@@ -36,12 +36,6 @@ export default function ContactPage() {
       setSubmitError(error.message);
       return;
     }
-    // Notify the support inbox; the message is already saved, so a failure here is ignored.
-    fetch("/api/contact-notify", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name: values.name, email: values.email, message: values.message }),
-    }).catch(() => {});
     setSubmitted(true);
     reset({ name: session?.name ?? "", email: "", message: "" });
   });

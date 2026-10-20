@@ -1,6 +1,5 @@
 "use client";
 
-import { SUPPORT_EMAIL } from "@/lib/site";
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
@@ -29,7 +28,7 @@ const crisisResources = [
   { label: "Emergency Services", href: "tel:911", icon: "call" },
   { label: "988 Suicide & Crisis Lifeline", href: "tel:988", icon: "call" },
   { label: "Crisis Text Line — Text HOME to 741741", href: "sms:741741", icon: "chat_bubble" },
-  { label: "Neutrality Mediation Contact", href: `mailto:${SUPPORT_EMAIL}`, icon: "forum" },
+  { label: "Neutrality Mediation Contact", href: "mailto:mediators@peacegangpeaceworld.org", icon: "forum" },
 ];
 
 const pillars = [
